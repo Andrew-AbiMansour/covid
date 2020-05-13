@@ -21,7 +21,7 @@ class ValidProteins(str, Enum):
     NSP9 = 'NSP9'
     NSP10 = 'NSP10'
     NSP11 = 'NSP11'
-    NSP13 = 'NSP13'
+    Helicase = 'Helicase'
     NSP14 = 'NSP14'
     NSP15 = 'NSP15'
     NSP16 = 'NSP16'
@@ -40,10 +40,23 @@ class ValidProteins(str, Enum):
     ORF3a = 'ORF3a'
     ORF6 = 'ORF6'
     ORF7b = 'ORF7b'
+    ORF7a = 'ORF7a'
     ORF8 = 'ORF8'
     ORF10 = 'ORF10'
     M_protein = 'M protein'
+    N_protein = 'N protein'
+    E_protein = 'E protein'
     PD_1 = 'PD-1'
+
+
+class ValidDomains(str, Enum):
+    """ Valid Protein Domains """
+    spike = 'spike'
+    nsp = 'nsp'
+    orf = 'orf'
+    membrane = 'membrane'
+    envelope = 'envelope'
+    nucleocapsid = 'nucleocapsid'
 
 
 class ValidTargets(str, Enum):
@@ -63,15 +76,12 @@ class ValidOrganisms(str, Enum):
     sars_cov_2 = 'SARS-CoV-2'
 
 
-class ValidInterest(str, Enum):
-    active = 'active'
-    low = 'low'
-
-
 class ResourcesEnum(str, Enum):
     structures = 'structures'
     models = 'models'
     publications = 'publications'
+    therapeutics = 'therapeutics'
+    biology = 'biology'
 
 
 class ValidSimulations(str, Enum):
@@ -79,6 +89,7 @@ class ValidSimulations(str, Enum):
     md = 'md'
     mc = 'mc'
     mdcg = 'md-cg'
+    mdwe = 'md-we'
     mccg = 'mc-cg'
 
 class ValidEnsembles(str, Enum):
@@ -106,7 +117,7 @@ class LinksModel(BaseModel):
     organization: Optional[str]
     institution: Optional[str]
     lab: Optional[str]
-    resources: Union[ResourcesEnum, List[ResourcesEnum]]
+    resources: List[ResourcesEnum]
 
 
 class ModelsModel(BaseModel):
@@ -132,10 +143,18 @@ class ModelsModel(BaseModel):
         return v
 
 
+class ValidTherapeutic(str, Enum):
+    antiviral = "antiviral"
+    small_molecule = "small molecule"
+    peptide = "peptide"
+    immunotherapy = "immunotherapy"
+    antibody = "antibody"
+
+
 class MoleculesModel(BaseModel):
     name: str
     description: str
-    therapeutic: Union[str, List[str]]
+    therapeutic: List[ValidTherapeutic]
     target: Union[ValidTargets, List[ValidTargets]]
     protein: Optional[Union[ValidProteins, List[ValidProteins]]]
     links: Optional[LinkOutKeys]
@@ -146,11 +165,20 @@ class ProteinsModel(BaseModel):
     protein: str
     organism: ValidOrganisms
     name: str
-    interest: ValidInterest
     description: str
     uniprot: Optional[str]
     target: Optional[Union[str, List[str]]]
     subunits: Optional[Dict[str, List[str]]]
+    domain: Optional[ValidDomains]
+
+    @validator('domain')
+    def domain_is_virus(cls, v, values, **kwargs):
+        if v is None and values.get('organism') != 'human':
+            raise ValueError("Domains for virus must be set!")
+        elif values.get('organism') == 'human' and v is not None:
+            raise ValueError(f"Domain is set but Organism is 'human' so does not apply. This could be a case of the "
+                             f"wrong organism. If this is a human organism, please unset domain.")
+        return v
 
 
 class SimulationsModel(BaseModel):
@@ -161,7 +189,7 @@ class SimulationsModel(BaseModel):
     organization: Optional[str]
     lab: Optional[str]
     institute: Optional[str]
-    models: List[str]
+    models: Optional[List[str]]
     proteins: List[ValidProteins]
     structures: List[str]
     rating: Optional[int]
@@ -170,10 +198,10 @@ class SimulationsModel(BaseModel):
     size: str
     length: str
     ensemble: ValidEnsembles
-    temperature: float
-    pressure: float
+    temperature: Optional[float]
+    pressure: Optional[float]
     solvent: str
-    salinity: float
+    salinity: Optional[float]
     forcefields: List[str]
     references: Optional[List[str]]
     publication: Optional[AnyUrl]
@@ -186,9 +214,19 @@ class SimulationsModel(BaseModel):
                 raise ValueError(f'Rating must be on domain [1,5], is {v}')
         return v
 
+    # @validator('pressure')
+    # def pressure_valid(cls, v):
+        # if isinstance(v, str):
+            # if v.equals('N/A'):
+                # raise ValueError(f'Pressure must be a valid float or N/A, is {v}')
+        # if not isinstance(v, float):
+            # raise ValueError(f'Pressure must be a valid float or N/A, is {v}')
+        # return v
+
 
 class StructuresModel(BaseModel):
-    pdbid: str
+    pdbid: Optional[str]
+    unpublished_pdbid: Optional[str]
     proteins: Union[ValidProteins, List[ValidProteins]]
     targets: Union[ValidTargets, List[ValidTargets]]
     annotation: Optional[str]
@@ -203,6 +241,15 @@ class StructuresModel(BaseModel):
         if v is not None:
             if v < 1 or v > 5:
                 raise ValueError(f'Rating must be on domain [1,5], is {v}')
+        return v
+
+    @validator('unpublished_pdbid', pre=True, always=True)
+    def at_least_one_of(cls, v, values, **kwargs):
+        """
+        Ensure at least one of pdbid or unpublished_pdbid is set
+        """
+        if not values.get('pdbid') and not v:
+            raise ValueError("At least one of pdbid or unpublished_pdbid must be set!")
         return v
 
 
@@ -254,6 +301,7 @@ class OrganizationModel(BaseModel):
     short: Optional[str]
     logo: Optional[str]
     url: Optional[AnyUrl]
+    endorsement_logo: Optional[str]
 
 
 class ContributorMemberModel(BaseModel):
