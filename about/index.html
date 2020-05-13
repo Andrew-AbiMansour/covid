@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>COVID-19 Molecular Structure and Therapeutics Hub</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://covid.molssi.org/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+
+ <meta name="generator" content="Hugo 0.57.2" />
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">COVID-19 Molecular Structure and Therapeutics Hub</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Biology<span class="caret"></span></a>
+                                    <ul class ="dropdown-menu">
+                                        
+                                            <li><a href="/proteins/">Proteins</a></li>
+                                        
+                                            <li><a href="/targets/">Target Modalities</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            
+                            
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Viral/Host Structural Data<span class="caret"></span></a>
+                                    <ul class ="dropdown-menu">
+                                        
+                                            <li><a href="/structures">Structures</a></li>
+                                        
+                                            <li><a href="/models">Models</a></li>
+                                        
+                                            <li><a href="/simulations">Simulations</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            
+                            
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Therapeutics<span class="caret"></span></a>
+                                    <ul class ="dropdown-menu">
+                                        
+                                            <li><a href="/therapeutics">All Therapeutics</a></li>
+                                        
+                                            <li><a href="/therapeutics#antiviral">Antivirals</a></li>
+                                        
+                                            <li><a href="/therapeutics#small-molecule">Small Molecules</a></li>
+                                        
+                                            <li><a href="/therapeutics#peptide">Peptides</a></li>
+                                        
+                                            <li><a href="/therapeutics#immunotherapy">Immunotherapies</a></li>
+                                        
+                                            <li><a href="/therapeutics#antibody">Antibodies</a></li>
+                                        
+                                            <li><a href="/therapeutics#ext_res_therapeutics">Drug Databases</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            
+                            
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Contribution<span class="caret"></span></a>
+                                    <ul class ="dropdown-menu">
+                                        
+                                            <li><a href="/contributors/">Contributors</a></li>
+                                        
+                                            <li><a href="/contributing/">How to Contribute</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            
+                            
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">About<span class="caret"></span></a>
+                                    <ul class ="dropdown-menu">
+                                        
+                                            <li><a href="/about/">About The Hub</a></li>
+                                        
+                                            <li><a href="/links/">External Resources</a></li>
+                                        
+                                            <li><a href="/glossary/">Glossary</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="/"><i class="fa fa-home"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/molssi/covid"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="mailto:info@molssi.org"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/MolSSI_NSF/"><i class="fa fa-twitter"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>COVID-19 Molecular Structure and Therapeutics Hub</h2>
+        <h5>What is This Hub?</h5>
+        
+
+    </div>
+
+    
+    <div align="start" class="content">
+        
+
+<p>A community data repository and curation service for Structure, Models, Therapeutics, Simulations
+related computations for research into the SARS-CoV-2 / COVID-19 / ”Coronavirus” pandemic maintained
+by <a href="https://molssi.org">The Molecular Sciences Software Institute (MolSSI)</a> and
+<a href="https://bioexcel.eu/">BioExcel</a>.
+This virus has spurred the entire scientific world into action looking for treatments and answers to
+help minimize its spread, its symptoms, and its fatalities.
+To help researchers and the community quickly provide their resources and expertise,
+this repository is meant to serve as a curated central repository of MM and MD input files,
+trajectories, analysis scripts, well-validated algorithms, and related data for immediate community
+access.</p>
+
+<p>This project may serve as a prototype into a future, more general Hub of structural and simulation Data
+project. There may come a time as this project evolves that it naturally does become more general (or
+change to another specific focus), however, this project focuses on the SARS-CoV-2 pandemic for now and
+future evolutions can be dealt with as they arise.</p>
+
+<h2 id="a-central-reference-for-community-simulation-data">A Central Reference for Community Simulation Data</h2>
+
+<p>The nature of this pandemic requires rapid, and flexible response. This repository, and the data
+within are designed to get the information out quickly. The repo seeks to provide the following information
+in a centralized location:</p>
+
+<ul>
+<li>Structures
+
+<ul>
+<li>Provenance of structure including any modifications made. Will accept manually written provenance.
+If modifications made by program, please include script along with pre-modified files and list of required
+programs to re-generate.</li>
+</ul></li>
+<li>Models
+
+<ul>
+<li>Extensions of the structures which are ready to go in a drug discovery Pipeline</li>
+</ul></li>
+<li>Therapeutics
+
+<ul>
+<li>Known small molecules, drug-likes, and other therapeutics which have been tested for treating this virus</li>
+</ul></li>
+<li>Simulation Configuration Files
+
+<ul>
+<li>Programs required to run (minimal subset which gets all dependencies, with minimal versions),</li>
+<li>Basic script and/or working instructions to execute these configuration files,</li>
+<li>Structure files (required for non-internet accessible structures, e.g. not required for things on the
+<a href="https://www.rcsb.org/">Protein Data Bank</a>)</li>
+</ul></li>
+<li>Analysis Data
+
+<ul>
+<li>Complete set of any of the previous data and exact details for replication</li>
+<li>Analysis scripts with placeholders for output trajectory files.</li>
+<li>Pointers to the trajectories if possible</li>
+</ul></li>
+<li>Trajectories - Not accepted in their entirety to the GitHub repository,
+
+<ul>
+<li>Pointers will be accepted and noted. (contact information, where it’s stored, how to request, URLs, etc)</li>
+<li>Program used to generate this trajectory.</li>
+<li>Structures (or links there to) which were used to initiate the simulation which yielded this trajectory.</li>
+<li>Config files and or scripts which were used to run the simulation that generate the trajectory (if possible)</li>
+</ul></li>
+<li>Papers - as links
+
+<ul>
+<li>Links to preprints and publications</li>
+<li>Inclusion of the files for the paper if they fall into the other categories above.</li>
+<li>Notation of any simulation package or software used to get the data in the paper</li>
+<li>Papers from multiple groups should be added in multiple folders (see <a href="#contributing">Contributing</a> below)</li>
+</ul></li>
+<li>Movies - hyperlinks only, please do not include full movie files.
+
+<ul>
+<li>Links to long term-hosted movies (e.g. YouTube).</li>
+<li>Structures (or links there to) which were used to initiate this movie.</li>
+<li>Config files and or scripts which were used to run the simulation that generate the trajectory (if possible)</li>
+<li>The trajectory which this movie references (if possible, see rules on Trajectories above)</li>
+</ul></li>
+<li>Algorithms - Well-validated and easily deployable algorithms such as functional Monte Carlo and machine learning methods and heuristic property calculators
+
+<ul>
+<li>Code Snippets</li>
+<li>Programing Language (if restricted)</li>
+<li>List of required software and minimal dependencies (if any)</li>
+</ul></li>
+</ul>
+
+<p>Due to the rapidly evolving nature of this hub, organization and requirements may change with time. However,
+no changes to the repository will remove user-submitted data. The maintainers may reach out to the original
+contributor to ask for additional information as needed.</p>
+
+<h2 id="the-website-itself">The Website Itself</h2>
+
+<p>All content for this website (excluding external links) exist on a single <a href="https://github.com/MolSSI/">Github repository</a>.
+Data, HTML pages, CSS, etc. all live there.</p>
+
+<p>This page is generated automatically from the GitHub through by <a href="https://gohugo.io/">Hugo</a> and deployed through
+<a href="https://www.netlify.com/">Netlify</a>.</p>
+
+<p>The symbols used to indicate &ldquo;publication&rdquo; and &ldquo;preprint&rdquo; are adapted from <a href="https://commons.wikimedia.org/wiki/File:Preprint_postprint_published.svg">Thomas Shafee through Wikimedia Commons</a>
+and are reused under its <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0 license</a>.</p>
+
+    </div>
+
+</main>
+
+
+        <footer>
+            <a href="https://molssi.org/"><img src="/images/org-logos/molssi_logo.png" style="width:10%"></a>
+            <a href="https://bioexcel.eu/"><img src="/images/org-logos/bioexcel_logo.png" style="width:10%"></a>
+        
+
+            <h3><u>Endorsements</u></h3>
+            
+
+
+ 
+ 
+  
+  
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+<style>
+
+.marquee {
+  height: 150px;
+  width: 750px;
+  overflow: hidden;
+  margin: auto;
+  box-sizing: border-box;
+  position: relative;
+  max-width: 750px;
+}
+
+.marquee--inner {
+  display: flex;
+  width: 1500px;
+  height: 150px;
+  margin: 0px 0;
+  position: absolute;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee--inner:hover {
+  animation-play-state: paused;
+}
+
+ 
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -750px; }
+}
+
+
+.endorsement-elements {
+   width: 250px;  
+   display: inline-block;
+   max-height: 150px;
+   flex-grow: 1;
+   align-self: center;
+}
+
+.endorsement-elements:hover {
+  transform: scale(0.9);
+  opacity: .8;
+  cursor: pointer;
+}
+
+.endorse-img {
+    display: block;
+    max-width: 250px;
+    max-height: calc(150px - 10px - 18px - 4px);  
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+</style>
+
+
+
+
+
+
+<div class="marquee">
+  <div class="marquee--inner">
+     
+        
+        
+          
+        
+          
+            <div align="center" class='endorsement-elements' style="margin:0;padding:0">
+              
+                <a href="https://www.deshawresearch.com/">
+              
+                <img class="endorse-img" src="/images/org-logos/DESRES_Logo_K.svg" alt="" />
+              
+                </a>
+              
+                <h4>D. E. Shaw Research</h4> 
+            </div>
+          
+        
+          
+            <div align="center" class='endorsement-elements' style="margin:0;padding:0">
+              
+                <a href="https://foldingathome.org/">
+              
+                <img class="endorse-img" src="/images/org-logos/fah.png" alt="" />
+              
+                </a>
+              
+                <h4>Folding @ Home</h4> 
+            </div>
+          
+        
+          
+        
+          
+            <div align="center" class='endorsement-elements' style="margin:0;padding:0">
+              
+                <a href="https://zhanglab.ccmb.med.umich.edu/">
+              
+                <img class="endorse-img" src="/images/org-logos/zhang-lab.jpg" alt="" />
+              
+                </a>
+              
+                <h4>Zhang Lab</h4> 
+            </div>
+          
+        
+     
+        
+        
+          
+        
+          
+            <div align="center" class='endorsement-elements' style="margin:0;padding:0">
+              
+                <a href="https://www.deshawresearch.com/">
+              
+                <img class="endorse-img" src="/images/org-logos/DESRES_Logo_K.svg" alt="" />
+              
+                </a>
+              
+                <h4>D. E. Shaw Research</h4> 
+            </div>
+          
+        
+          
+            <div align="center" class='endorsement-elements' style="margin:0;padding:0">
+              
+                <a href="https://foldingathome.org/">
+              
+                <img class="endorse-img" src="/images/org-logos/fah.png" alt="" />
+              
+                </a>
+              
+                <h4>Folding @ Home</h4> 
+            </div>
+          
+        
+          
+        
+          
+            <div align="center" class='endorsement-elements' style="margin:0;padding:0">
+              
+                <a href="https://zhanglab.ccmb.med.umich.edu/">
+              
+                <img class="endorse-img" src="/images/org-logos/zhang-lab.jpg" alt="" />
+              
+                </a>
+              
+                <h4>Zhang Lab</h4> 
+            </div>
+          
+        
+    
+  </div>
+</div>
+
+            <p class="copyright text-muted">&copy; All rights reserved. COVID-19 Molecular Structure and Therapeutics Hub is lead by <a href="http://molssi.org/">MolSSI</a> &amp; <a href="https://bioexcel.eu">BioExcel</a>. The MolSSI is supported by the U.S. National Science Foundation through grant number OAC-1547580. <a href="https://ec.europa.eu/programmes/horizon2020">BioExcel is funded by the European Union Horizon 2020</a> program under grant agreements <a href="https://cordis.europa.eu/project/id/823830">823830</a>, <a href="https://cordis.europa.eu/project/id/675728">675728</a></p>
+        </footer>
+
+        
+
+
+
+    </body>
+
+</html>
+

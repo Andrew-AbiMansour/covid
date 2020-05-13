@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>COVID-19 Molecular Structure and Therapeutics Hub</title>
+    <link>https://covid.molssi.org/</link>
+    <description>Recent content on COVID-19 Molecular Structure and Therapeutics Hub</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://covid.molssi.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Contributing Data to the Hub</title>
+      <link>https://covid.molssi.org/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://covid.molssi.org/contributing/</guid>
+      <description>Data Publication Indicator System All data submitted to the website is flagged based on the data&amp;rsquo;s current state of publication.
+Unpublished data with no preprints have no indicator Data in a preprint or submitted for publication are given this marker. If the preprint is available, it will always show and should work as a link Data published in a paper or accepted are given this marker (i.e. has been approved by formal peer review) and should work as links.</description>
+    </item>
+    
+    <item>
+      <title>Contributors to the Hub</title>
+      <link>https://covid.molssi.org/contributors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://covid.molssi.org/contributors/</guid>
+      <description>We would like to thank all the people who contributed to the COVID-19 Molecular Structure and Therapeutics Hub. Each member of this list has contributed their time in providing advice, development help, and/or data to the hub.
+Add your name to the /data/contributors/people.yml file as part of your Pull Request to be added to the list.</description>
+    </item>
+    
+    <item>
+      <title>COVID-19 Molecular Structure and Therapeutics Hub</title>
+      <link>https://covid.molssi.org/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://covid.molssi.org/about/</guid>
+      <description>A community data repository and curation service for Structure, Models, Therapeutics, Simulations related computations for research into the SARS-CoV-2 / COVID-19 / ”Coronavirus” pandemic maintained by The Molecular Sciences Software Institute (MolSSI) and BioExcel. This virus has spurred the entire scientific world into action looking for treatments and answers to help minimize its spread, its symptoms, and its fatalities. To help researchers and the community quickly provide their resources and expertise, this repository is meant to serve as a curated central repository of MM and MD input files, trajectories, analysis scripts, well-validated algorithms, and related data for immediate community access.</description>
+    </item>
+    
+    <item>
+      <title>External resources</title>
+      <link>https://covid.molssi.org/links/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://covid.molssi.org/links/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Models</title>
+      <link>https://covid.molssi.org/models/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://covid.molssi.org/models/</guid>
+      <description>Many models come from the Coronavirus Structural Task Force.</description>
+    </item>
+    
+    <item>
+      <title>Proteins</title>
+      <link>https://covid.molssi.org/proteins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://covid.molssi.org/proteins/</guid>
+      <description>Virus (SARS-CoV-2 and SARS-CoV), Validated Host validated, and Presumed Host presumed based protein. Validated proteins are known essential host genes or interactions. The presumed are implicated host proteins that arise from analyses, but have not been universally agreed upon.</description>
+    </item>
+    
+    <item>
+      <title>Simulations</title>
+      <link>https://covid.molssi.org/simulations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://covid.molssi.org/simulations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Site Glossary</title>
+      <link>https://covid.molssi.org/glossary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://covid.molssi.org/glossary/</guid>
+      <description>Glossary The Hub employs terminology self-consistently throughout the site. However, some of these terms may be ambiguous or appear to overlap due to the common appears of these terms in the broader scientific community.
+We define each term here, and how they relate to each other to reduce collisions of the terms as they apply elsewhere.
+The terms here appear alphabetically and link to the primary page where the term applies (if applicable)</description>
+    </item>
+    
+    <item>
+      <title>Structures</title>
+      <link>https://covid.molssi.org/structures/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://covid.molssi.org/structures/</guid>
+      <description>Structures on this page are grouped in tiers:
+ Viral VS Host Active interest VS low interest in drug discovery Therapeutic Modality (Target) Structure Rating Model Ratings  Because of the sorting, structures may appear in multiple groups under the first three categories, but they will all link out to the same locations.
+Many structural annotations and reviews come from the Coronavirus Structural Task Force.</description>
+    </item>
+    
+    <item>
+      <title>Targets</title>
+      <link>https://covid.molssi.org/targets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://covid.molssi.org/targets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Teams</title>
+      <link>https://covid.molssi.org/teams/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://covid.molssi.org/teams/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Therapeutics and Small Molecules</title>
+      <link>https://covid.molssi.org/therapeutics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://covid.molssi.org/therapeutics/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

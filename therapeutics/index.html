@@ -1,0 +1,1962 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Therapeutics and Small Molecules</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://covid.molssi.org/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+
+ <meta name="generator" content="Hugo 0.57.2" />
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Therapeutics and Small Molecules</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Biology<span class="caret"></span></a>
+                                    <ul class ="dropdown-menu">
+                                        
+                                            <li><a href="/proteins/">Proteins</a></li>
+                                        
+                                            <li><a href="/targets/">Target Modalities</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            
+                            
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Viral/Host Structural Data<span class="caret"></span></a>
+                                    <ul class ="dropdown-menu">
+                                        
+                                            <li><a href="/structures">Structures</a></li>
+                                        
+                                            <li><a href="/models">Models</a></li>
+                                        
+                                            <li><a href="/simulations">Simulations</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            
+                            
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Therapeutics<span class="caret"></span></a>
+                                    <ul class ="dropdown-menu">
+                                        
+                                            <li><a href="/therapeutics">All Therapeutics</a></li>
+                                        
+                                            <li><a href="/therapeutics#antiviral">Antivirals</a></li>
+                                        
+                                            <li><a href="/therapeutics#small-molecule">Small Molecules</a></li>
+                                        
+                                            <li><a href="/therapeutics#peptide">Peptides</a></li>
+                                        
+                                            <li><a href="/therapeutics#immunotherapy">Immunotherapies</a></li>
+                                        
+                                            <li><a href="/therapeutics#antibody">Antibodies</a></li>
+                                        
+                                            <li><a href="/therapeutics#ext_res_therapeutics">Drug Databases</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            
+                            
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Contribution<span class="caret"></span></a>
+                                    <ul class ="dropdown-menu">
+                                        
+                                            <li><a href="/contributors/">Contributors</a></li>
+                                        
+                                            <li><a href="/contributing/">How to Contribute</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            
+                            
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">About<span class="caret"></span></a>
+                                    <ul class ="dropdown-menu">
+                                        
+                                            <li><a href="/about/">About The Hub</a></li>
+                                        
+                                            <li><a href="/links/">External Resources</a></li>
+                                        
+                                            <li><a href="/glossary/">Glossary</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="/"><i class="fa fa-home"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/molssi/covid"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="mailto:info@molssi.org"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/MolSSI_NSF/"><i class="fa fa-twitter"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+<main>
+
+    <div>
+        <h2>Therapeutics and Small Molecules</h2>
+        <h4>Therapeutic treatments and drug-like small molecules.</h4>
+        <h4 align="justify"></h4>
+
+        <h5 align="left">
+        Data classification:
+            <ul style="text-align:left;">
+                
+                    
+                    <li><a href="/therapeutics"><b>Therapeutics:</b></a> Molecules, drugs, antibodies, peptides, etc. which implement targets.</li>
+                
+                    
+                    <li><a href="/targets"><b>Targets:</b></a> The biological mechanisms and functions which can be exploited to reduce, prevent, or treat the virus.</li>
+                
+                    
+                    <li><a href="/proteins"><b>Proteins:</b></a> The biological proteins associated with the SARS-CoV-2 virus and host.</li>
+                
+            </ul>
+        </h5>
+
+    </div>
+
+    
+    
+        <hr class="hr-thick">
+        
+        <div class="col col-9">
+            
+            <h3 class="anchor" id="antibody"><b><u>Antibody</u></b> <img width=30 src="/images/sars-cov-2-thumbnail.jpg"></h3>
+
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+                    
+
+
+
+
+
+
+
+<h4 align="center">Immunoglobulin</h4>
+
+
+
+
+<p align="justify">Immunoglobulin AKA antibody is a protein produced by B cells that is used to fight against pathogens and viruses via adaptive immunity.</p>
+
+
+<p align="justify"><b>Mechanism: </b>proposed to block viral Fc receptor activation by boosting endogenous neutralizing antibodies and preventing antibody-dependent enhancement of infection</p>
+
+
+  <h5 align="left"><b>Read more about it:</b>
+  
+    <a href='https://en.wikipedia.org/wiki/Antibody'><kbd class="alert-info">Wikipedia</kbd></a>
+  
+  
+  
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Targeting Modalities:</b>
+  
+  
+    <a href='https://covid.molssi.org//targets/#inhibition-of-formation-of-the-viral-fusion-core'><kbd class="item-tag">Viral Fusion</kbd></a>
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Known Protein Interactions:</b>
+  
+  
+    <a href='https://covid.molssi.org//proteins/#ab-receptor-in-host-cells-fcr'><kbd class="bg-primary">Fc receptor</kbd></a>
+  
+  </h5>
+
+<hr>
+
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+                    
+
+
+
+
+
+
+
+<h4 align="center">Nivolumab</h4>
+
+
+    <img src="https://www.drugbank.ca/structures/DB09035/thumb.svg">
+
+
+
+<p align="justify">Nivolumab is a full human IgG4 antibody that targets PD-1, programmed cell death protein 1, and is used in combination with protease inhibitors to activate T-cells to launch an immune response against the tumor. Used to combat cancer</p>
+
+
+<p align="justify"><b>Mechanism: </b>Blocks PD-1 inhibitory signaling to T-cells</p>
+
+
+  <h5 align="left"><b>Read more about it:</b>
+  
+    <a href='https://en.wikipedia.org/wiki/Nivolumab'><kbd class="alert-info">Wikipedia</kbd></a>
+  
+  
+    <a href='https://www.drugbank.ca/drugs/DB09035'><kbd class="alert-info">DrugBank</kbd></a>
+  
+  
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Targeting Modalities:</b>
+  
+  
+    <a href='https://covid.molssi.org//targets/#host-immune-response'><kbd class="item-tag">Host Immune Response</kbd></a>
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Known Protein Interactions:</b>
+  
+  
+    <a href='https://covid.molssi.org//proteins/#programmed-cell-death-factor-1'><kbd class="bg-primary">PD-1</kbd></a>
+  
+  </h5>
+
+<hr>
+
+                
+            
+                
+                
+            
+                
+                
+                    
+
+
+
+
+
+
+
+<h4 align="center">Tocilizumab</h4>
+
+
+    <img src="https://www.drugbank.ca/structures/DB06273/thumb.svg">
+
+
+
+<p align="justify">targets soluble and membrane-bound IL-6 receptors (sIL-6R and mIL-6R). Previously used for rheumatoid arthritis, systemic juvenile idiopathic arthritis, and CAR T cell induced severe or life threatening cytokine release syndrome in conjunction with protease inhibitors</p>
+
+
+<p align="justify"><b>Mechanism: </b>Targets soluble and membrane-bound IL-6 receptors to decrease immune and inflammatory responses</p>
+
+
+  <h5 align="left"><b>Read more about it:</b>
+  
+    <a href='https://en.wikipedia.org/wiki/Tocilizumab'><kbd class="alert-info">Wikipedia</kbd></a>
+  
+  
+    <a href='https://www.drugbank.ca/drugs/DB06273'><kbd class="alert-info">DrugBank</kbd></a>
+  
+  
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Targeting Modalities:</b>
+  
+  
+    <a href='https://covid.molssi.org//targets/#host-immune-response'><kbd class="item-tag">Host Immune Response</kbd></a>
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Known Protein Interactions:</b>
+  
+  
+    <a href='https://covid.molssi.org//proteins/#interleukin-6-il-6-receptor'><kbd class="bg-primary">IL6R</kbd></a>
+  
+  </h5>
+
+<hr>
+
+                
+            
+
+        </div>
+    
+        <hr class="hr-thick">
+        
+        <div class="col col-9">
+            
+            <h3 class="anchor" id="antiviral"><b><u>Antiviral</u></b> <img width=30 src="/images/sars-cov-2-thumbnail.jpg"></h3>
+
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+                    
+
+
+
+
+
+
+
+<h4 align="center">Arbidol (Umifenovir)</h4>
+
+
+    <img src="https://www.drugbank.ca/structures/DB13609/thumb.svg">
+
+
+
+<p align="justify">Arbidol is an FDA approved drug for Influenza. Arbidol is an indole based antiviral/host-targeting agent.</p>
+
+
+<p align="justify"><b>Mechanism: </b>May disrupt the binding of viral envelope protein to host cells and prevent viral entry to the target cell</p>
+
+
+  <h5 align="left"><b>Read more about it:</b>
+  
+    <a href='https://en.wikipedia.org/wiki/Umifenovir'><kbd class="alert-info">Wikipedia</kbd></a>
+  
+  
+    <a href='https://www.drugbank.ca/drugs/DB13609'><kbd class="alert-info">DrugBank</kbd></a>
+  
+  
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Targeting Modalities:</b>
+  
+  
+    <a href='https://covid.molssi.org//targets/#blocking-sars-cov-2-spike-protein-binding-to-human-ace2-receptor'><kbd class="item-tag">Spike Binding</kbd></a>
+  
+    <a href='https://covid.molssi.org//targets/#inhibition-of-viral-polymerases'><kbd class="item-tag">Viral Replication</kbd></a>
+  
+    <a href='https://covid.molssi.org//targets/#inhibition-of-formation-of-the-viral-fusion-core'><kbd class="item-tag">Viral Fusion</kbd></a>
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Known Protein Interactions:</b>
+  
+  
+    <a href='https://covid.molssi.org//proteins/#angiotensin-converting-enzyme-2-ace2'><kbd class="bg-primary">ACE2</kbd></a>
+  
+    <a href='https://covid.molssi.org//proteins/#sars-cov-2-spike-s-glycoprotein'><kbd class="bg-primary">spike</kbd></a>
+  
+  </h5>
+
+<hr>
+
+                
+            
+                
+                
+                    
+
+
+
+
+
+
+
+<h4 align="center">Azvudine</h4>
+
+
+
+
+<p align="justify">Azvudine is an azidocytidine nucleoside analog. It is an reverse transcriptase inhibitor used in treatment of AIDS and Hepatitis C.</p>
+
+
+<p align="justify"><b>Mechanism: </b>Blocks the reverse transcriptase enzyme halting the virus from replicating</p>
+
+
+  <h5 align="left"><b>Read more about it:</b>
+  
+    <a href='https://en.wikipedia.org/wiki/Azvudine'><kbd class="alert-info">Wikipedia</kbd></a>
+  
+  
+  
+  
+    <a href='https://pubchem.ncbi.nlm.nih.gov/compound/Azvudine'><kbd class='alert-info'>PubChem</kbd></a>
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Targeting Modalities:</b>
+  
+  
+    <a href='https://covid.molssi.org//targets/#inhibition-of-viral-polymerases'><kbd class="item-tag">Viral Replication</kbd></a>
+  
+  </h5>
+
+
+
+
+<hr>
+
+                
+            
+                
+                
+                    
+
+
+
+
+
+
+
+<h4 align="center">Danoprevir</h4>
+
+
+    <img src="https://www.drugbank.ca/structures/DB11779/thumb.svg">
+
+
+
+<p align="justify">Danoprevir is a protease inhibitor used in combination with ritonavir for Hepatitis C and HIV-AIDS. Has been used in combination with ritonavir in SARS-2 patients.</p>
+
+
+<p align="justify"><b>Mechanism: </b>Believed to inhibit the 3CL-PRO viral protease of SARS-CoV-2</p>
+
+
+  <h5 align="left"><b>Read more about it:</b>
+  
+    <a href='https://en.wikipedia.org/wiki/Danoprevir'><kbd class="alert-info">Wikipedia</kbd></a>
+  
+  
+    <a href='https://www.drugbank.ca/drugs/DB11779'><kbd class="alert-info">DrugBank</kbd></a>
+  
+  
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Targeting Modalities:</b>
+  
+  
+    <a href='https://covid.molssi.org//targets/#inhibition-of-viral-polymerases'><kbd class="item-tag">Viral Replication</kbd></a>
+  
+  </h5>
+
+
+
+
+<hr>
+
+                
+            
+                
+                
+                    
+
+
+
+
+
+
+
+<h4 align="center">Darunavir</h4>
+
+
+    <img src="https://www.drugbank.ca/structures/DB01264/thumb.svg">
+
+
+
+<p align="justify">Darunavir is an HIV protease inhibitor used in combination with pharmacokinetic enhancer like cobicistat.</p>
+
+
+<p align="justify"><b>Mechanism: </b>Darunavir is an HIV protease inhibitor, but currently there is a lack of evidence of its utility in treating COVID-19.</p>
+
+
+  <h5 align="left"><b>Read more about it:</b>
+  
+    <a href='https://en.wikipedia.org/wiki/Darunavir'><kbd class="alert-info">Wikipedia</kbd></a>
+  
+  
+    <a href='https://www.drugbank.ca/drugs/DB01264'><kbd class="alert-info">DrugBank</kbd></a>
+  
+  
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Targeting Modalities:</b>
+  
+  
+    <a href='https://covid.molssi.org//targets/#inhibition-of-viral-polymerases'><kbd class="item-tag">Viral Replication</kbd></a>
+  
+  </h5>
+
+
+
+
+<hr>
+
+                
+            
+                
+                
+                    
+
+
+
+
+
+
+
+<h4 align="center">Favipiravir</h4>
+
+
+
+
+<p align="justify">Favipiravir is a broad-spectrum antiviral used in treatment of influenza, ebola, and yellow fever. Favipiravir is a modified  pyrazine analog.</p>
+
+
+<p align="justify"><b>Mechanism: </b>Inhibits viral RNA-dependent RNA Polymerase</p>
+
+
+  <h5 align="left"><b>Read more about it:</b>
+  
+    <a href='https://en.wikipedia.org/wiki/avipiravir'><kbd class="alert-info">Wikipedia</kbd></a>
+  
+  
+  
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Targeting Modalities:</b>
+  
+  
+    <a href='https://covid.molssi.org//targets/#inhibition-of-viral-polymerases'><kbd class="item-tag">Viral Replication</kbd></a>
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Known Protein Interactions:</b>
+  
+  
+    <a href='https://covid.molssi.org//proteins/#sars-cov-2-rna-polymerase-nsp12'><kbd class="bg-primary">RdRP</kbd></a>
+  
+  </h5>
+
+<hr>
+
+                
+            
+                
+                
+                    
+
+
+
+
+
+
+
+<h4 align="center">Immunoglobulin</h4>
+
+
+
+
+<p align="justify">Immunoglobulin AKA antibody is a protein produced by B cells that is used to fight against pathogens and viruses via adaptive immunity.</p>
+
+
+<p align="justify"><b>Mechanism: </b>proposed to block viral Fc receptor activation by boosting endogenous neutralizing antibodies and preventing antibody-dependent enhancement of infection</p>
+
+
+  <h5 align="left"><b>Read more about it:</b>
+  
+    <a href='https://en.wikipedia.org/wiki/Antibody'><kbd class="alert-info">Wikipedia</kbd></a>
+  
+  
+  
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Targeting Modalities:</b>
+  
+  
+    <a href='https://covid.molssi.org//targets/#inhibition-of-formation-of-the-viral-fusion-core'><kbd class="item-tag">Viral Fusion</kbd></a>
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Known Protein Interactions:</b>
+  
+  
+    <a href='https://covid.molssi.org//proteins/#ab-receptor-in-host-cells-fcr'><kbd class="bg-primary">Fc receptor</kbd></a>
+  
+  </h5>
+
+<hr>
+
+                
+            
+                
+                
+                    
+
+
+
+
+
+
+
+<h4 align="center">Interferons Alfa-2b</h4>
+
+
+
+
+<p align="justify">Interferons alfa-2b is a recombinant cytokine with antiviral or antineoplastic property. Interferons alfa-2b is used alone or in combination with  lopinavir/ritonavir.</p>
+
+
+<p align="justify"><b>Mechanism: </b>binds to type I interferon receptors (IFNAR1 and IFNAR2), upon dimerization activates two JAK tyrosine kinases, phosphorylate themselves and receptors then bind to Stat1 and Stat2 and activates multiple antiviral and immunomodulatory properties.</p>
+
+
+  <h5 align="left"><b>Read more about it:</b>
+  
+    <a href='https://en.wikipedia.org/wiki/Interferon_alfa-2b'><kbd class="alert-info">Wikipedia</kbd></a>
+  
+  
+  
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Targeting Modalities:</b>
+  
+  
+    <a href='https://covid.molssi.org//targets/#inhibition-of-viral-polymerases'><kbd class="item-tag">Viral Replication</kbd></a>
+  
+  </h5>
+
+
+
+
+<hr>
+
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+
+        </div>
+    
+        <hr class="hr-thick">
+        
+        <div class="col col-9">
+            
+            <h3 class="anchor" id="immunotherapy"><b><u>Immunotherapy</u></b> <img width=30 src="/images/sars-cov-2-thumbnail.jpg"></h3>
+
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+                    
+
+
+
+
+
+
+
+<h4 align="center">Immunoglobulin</h4>
+
+
+
+
+<p align="justify">Immunoglobulin AKA antibody is a protein produced by B cells that is used to fight against pathogens and viruses via adaptive immunity.</p>
+
+
+<p align="justify"><b>Mechanism: </b>proposed to block viral Fc receptor activation by boosting endogenous neutralizing antibodies and preventing antibody-dependent enhancement of infection</p>
+
+
+  <h5 align="left"><b>Read more about it:</b>
+  
+    <a href='https://en.wikipedia.org/wiki/Antibody'><kbd class="alert-info">Wikipedia</kbd></a>
+  
+  
+  
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Targeting Modalities:</b>
+  
+  
+    <a href='https://covid.molssi.org//targets/#inhibition-of-formation-of-the-viral-fusion-core'><kbd class="item-tag">Viral Fusion</kbd></a>
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Known Protein Interactions:</b>
+  
+  
+    <a href='https://covid.molssi.org//proteins/#ab-receptor-in-host-cells-fcr'><kbd class="bg-primary">Fc receptor</kbd></a>
+  
+  </h5>
+
+<hr>
+
+                
+            
+                
+                
+                    
+
+
+
+
+
+
+
+<h4 align="center">Interferons Alfa-2b</h4>
+
+
+
+
+<p align="justify">Interferons alfa-2b is a recombinant cytokine with antiviral or antineoplastic property. Interferons alfa-2b is used alone or in combination with  lopinavir/ritonavir.</p>
+
+
+<p align="justify"><b>Mechanism: </b>binds to type I interferon receptors (IFNAR1 and IFNAR2), upon dimerization activates two JAK tyrosine kinases, phosphorylate themselves and receptors then bind to Stat1 and Stat2 and activates multiple antiviral and immunomodulatory properties.</p>
+
+
+  <h5 align="left"><b>Read more about it:</b>
+  
+    <a href='https://en.wikipedia.org/wiki/Interferon_alfa-2b'><kbd class="alert-info">Wikipedia</kbd></a>
+  
+  
+  
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Targeting Modalities:</b>
+  
+  
+    <a href='https://covid.molssi.org//targets/#inhibition-of-viral-polymerases'><kbd class="item-tag">Viral Replication</kbd></a>
+  
+  </h5>
+
+
+
+
+<hr>
+
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+
+        </div>
+    
+        <hr class="hr-thick">
+        
+        <div class="col col-9">
+            
+            <h3 class="anchor" id="peptide"><b><u>Peptide</u></b> <img width=30 src="/images/sars-cov-2-thumbnail.jpg"></h3>
+
+            
+                
+                
+            
+                
+                
+                    
+
+
+
+
+
+
+
+<h4 align="center">EK1C4</h4>
+
+
+
+
+<p align="justify">Pan-coronavirus fusion inhibitor EK1 peptide with GS linker and cholesterol. Show to be more effective against SARS-CoV-2</p>
+
+
+<p align="justify"><b>Mechanism: </b></p>
+
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Targeting Modalities:</b>
+  
+  
+    <a href='https://covid.molssi.org//targets/#inhibition-of-formation-of-the-viral-fusion-core'><kbd class="item-tag">Viral Fusion</kbd></a>
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Known Protein Interactions:</b>
+  
+  
+    <a href='https://covid.molssi.org//proteins/#sars-cov-2-spike-s-glycoprotein'><kbd class="bg-primary">spike</kbd></a>
+  
+    <a href=''><kbd class="bg-primary">S2</kbd></a>
+  
+    <a href='https://covid.molssi.org//proteins/#viral-spike-fusion-core'><kbd class="bg-primary">fusion core</kbd></a>
+  
+    <a href=''><kbd class="bg-primary">HR1</kbd></a>
+  
+  </h5>
+
+<hr>
+
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+                    
+
+
+
+
+
+
+
+<h4 align="center">Immunoglobulin</h4>
+
+
+
+
+<p align="justify">Immunoglobulin AKA antibody is a protein produced by B cells that is used to fight against pathogens and viruses via adaptive immunity.</p>
+
+
+<p align="justify"><b>Mechanism: </b>proposed to block viral Fc receptor activation by boosting endogenous neutralizing antibodies and preventing antibody-dependent enhancement of infection</p>
+
+
+  <h5 align="left"><b>Read more about it:</b>
+  
+    <a href='https://en.wikipedia.org/wiki/Antibody'><kbd class="alert-info">Wikipedia</kbd></a>
+  
+  
+  
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Targeting Modalities:</b>
+  
+  
+    <a href='https://covid.molssi.org//targets/#inhibition-of-formation-of-the-viral-fusion-core'><kbd class="item-tag">Viral Fusion</kbd></a>
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Known Protein Interactions:</b>
+  
+  
+    <a href='https://covid.molssi.org//proteins/#ab-receptor-in-host-cells-fcr'><kbd class="bg-primary">Fc receptor</kbd></a>
+  
+  </h5>
+
+<hr>
+
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+
+        </div>
+    
+        <hr class="hr-thick">
+        
+        <div class="col col-9">
+            
+            <h3 class="anchor" id="small-molecule"><b><u>Small Molecule</u></b> <img width=30 src="/images/sars-cov-2-thumbnail.jpg"></h3>
+
+            
+                
+                
+                    
+
+
+
+
+
+
+
+<h4 align="center">Chloroquine</h4>
+
+
+
+
+<p align="justify">Chloroquine is an aminoquinoline with anti-malarial and anti-inflammatory activities. Chloroquine acts during both viral entry and post entry steps.</p>
+
+
+<p align="justify"><b>Mechanism: </b>The potential mechanisms for attacking the virus &gt; By inhibiting viral enzymes, viral protein glycosylation, viral assembly, and virus release By changing the acidity of the cells By inhibiting the ACE2 cellular receptor By activating the immune response</p>
+
+
+  <h5 align="left"><b>Read more about it:</b>
+  
+    <a href='https://en.wikipedia.org/wiki/Chloroquine'><kbd class="alert-info">Wikipedia</kbd></a>
+  
+  
+  
+    <a href='http://www.chemspider.com/Chemical-Structure.2618.html'><kbd class="alert-info">ChemSpider</kbd></a>
+  
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Targeting Modalities:</b>
+  
+  
+    <a href='https://covid.molssi.org//targets/#inhibition-of-viral-polymerases'><kbd class="item-tag">Viral Replication</kbd></a>
+  
+    <a href='https://covid.molssi.org//targets/#inhibition-of-formation-of-the-viral-fusion-core'><kbd class="item-tag">Viral Fusion</kbd></a>
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Known Protein Interactions:</b>
+  
+  
+    <a href='https://covid.molssi.org//proteins/#angiotensin-converting-enzyme-2-ace2'><kbd class="bg-primary">ACE2</kbd></a>
+  
+    <a href='https://covid.molssi.org//proteins/#sars-cov-2-spike-s-glycoprotein'><kbd class="bg-primary">spike</kbd></a>
+  
+  </h5>
+
+<hr>
+
+                
+            
+                
+                
+            
+                
+                
+                    
+
+
+
+
+
+
+
+<h4 align="center">Hydroxychloroquine</h4>
+
+
+
+
+<p align="justify">Hydroxychloroquine is primarily an antimalarial drugs alse used in treating autoimmune diseases like Rheumatoid arthritis, lupus. Hydroxychloroquine has more potency than chloroquine against SARS-CoV-2.</p>
+
+
+<p align="justify"><b>Mechanism: </b>Act primarily by&gt; Altering endosomal pH and affecting virus-cell fusion By inhibiting the ACE2 cellular receptor By activating the immune response</p>
+
+
+  <h5 align="left"><b>Read more about it:</b>
+  
+    <a href='https://en.wikipedia.org/wiki/Hydroxychloroquine'><kbd class="alert-info">Wikipedia</kbd></a>
+  
+  
+  
+    <a href='http://www.chemspider.com/Chemical-Structure.3526.html'><kbd class="alert-info">ChemSpider</kbd></a>
+  
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Targeting Modalities:</b>
+  
+  
+    <a href='https://covid.molssi.org//targets/#inhibition-of-formation-of-the-viral-fusion-core'><kbd class="item-tag">Viral Fusion</kbd></a>
+  
+    <a href='https://covid.molssi.org//targets/#inhibition-of-viral-polymerases'><kbd class="item-tag">Viral Replication</kbd></a>
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Known Protein Interactions:</b>
+  
+  
+    <a href='https://covid.molssi.org//proteins/#angiotensin-converting-enzyme-2-ace2'><kbd class="bg-primary">ACE2</kbd></a>
+  
+    <a href='https://covid.molssi.org//proteins/#sars-cov-2-spike-s-glycoprotein'><kbd class="bg-primary">spike</kbd></a>
+  
+  </h5>
+
+<hr>
+
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+                    
+
+
+
+
+
+
+
+<h4 align="center">Lopinavir</h4>
+
+
+    <img src="https://www.drugbank.ca/structures/DB01601/thumb.svg">
+
+
+
+<p align="justify">Lopinavir is a protease inhibitor with high specificity for HIV-1 protease. It is used against HIV infections as a combinaton with Ritonavir (another protease inhibitor)</p>
+
+
+<p align="justify"><b>Mechanism: </b>Inhibits the viral proteases</p>
+
+
+  <h5 align="left"><b>Read more about it:</b>
+  
+    <a href='https://en.wikipedia.org/wiki/Lopinavir'><kbd class="alert-info">Wikipedia</kbd></a>
+  
+  
+    <a href='https://www.drugbank.ca/drugs/DB01601'><kbd class="alert-info">DrugBank</kbd></a>
+  
+  
+    <a href='http://www.chemspider.com/Chemical-Structure.83706.html'><kbd class="alert-info">ChemSpider</kbd></a>
+  
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Targeting Modalities:</b>
+  
+  
+    <a href='https://covid.molssi.org//targets/#inhibition-of-plpro-protease-activity'><kbd class="item-tag">PLpro Protease Activity</kbd></a>
+  
+    <a href='https://covid.molssi.org//targets/#3clpro-mpro-activity'><kbd class="item-tag">3CLpro Protease Activity</kbd></a>
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Known Protein Interactions:</b>
+  
+  
+    <a href='https://covid.molssi.org//proteins/#sars-cov-2-main-protease-3clpro-or-nsp5'><kbd class="bg-primary">3CLpro</kbd></a>
+  
+    <a href='https://covid.molssi.org//proteins/#sars-cov-2-papain-like-protease-nsp3'><kbd class="bg-primary">PLpro</kbd></a>
+  
+  </h5>
+
+<hr>
+
+                
+            
+                
+                
+            
+                
+                
+                    
+
+
+
+
+
+
+
+<h4 align="center">Remdesivir</h4>
+
+
+
+
+<p align="justify">Remdesivir is a novel antiviral drug in the class of nucleotide analogs. Remdesivir is an adenosine analogue, which incorporates into nascent viral RNA chains and causes their pre-mature termination.</p>
+
+
+<p align="justify"><b>Mechanism: </b>inhibitor of RNA-dependent RNA polymerase</p>
+
+
+  <h5 align="left"><b>Read more about it:</b>
+  
+    <a href='https://en.wikipedia.org/wiki/wikipedia:%20https://en.wikipedia.org/wiki/Remdesivir'><kbd class="alert-info">Wikipedia</kbd></a>
+  
+  
+  
+    <a href='http://www.chemspider.com/Chemical-Structure.http://www.chemspider.com/Chemical-Structure.58827832.html.html'><kbd class="alert-info">ChemSpider</kbd></a>
+  
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Targeting Modalities:</b>
+  
+  
+    <a href='https://covid.molssi.org//targets/#inhibition-of-viral-polymerases'><kbd class="item-tag">Viral Replication</kbd></a>
+  
+  </h5>
+
+
+
+
+  
+      
+  
+  <h5 align="left"><b>Known Protein Interactions:</b>
+  
+  
+    <a href='https://covid.molssi.org//proteins/#sars-cov-2-rna-polymerase-nsp12'><kbd class="bg-primary">RdRP</kbd></a>
+  
+  </h5>
+
+<hr>
+
+                
+            
+                
+                
+            
+
+        </div>
+    
+
+    <hr class="hr-thick">
+
+    <h3 id="ext_res_therapeutics"> External Therapeutics and Drug Databases </h3>
+        
+            
+        
+            
+        
+            
+                
+
+
+<a href="https://clue.io/repurposing"><h4 align="center">Drug Repurposing Hub</h4></a>
+
+<p align="justify"><b>Description:</b> The Drug Repurposing Hub is a curated and annotated collection of FDA-approved drugs, clinical trial drugs, and pre-clinical tool compounds with a companion information resource. Order library plates to screen yourself or collaborate with the Broad Institute’s Center for the Development of Therapeutics to see if an existing drug may work against your novel target, model system, or indication. While the collection will undoubtedly reveal new uses for developed drugs, its true power is unlocked when applied to discover new biological insights and disease mechanisms.</p>
+
+
+
+
+    <p align="justify"><b>Institution:</b> University of California, San Francisco</p>
+
+
+
+    <p align="justify"><b>Lab:</b> John Irwin, Brian Shoichet, and others</p>
+
+
+<hr>
+
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                
+
+
+<a href="https://www.drugbank.ca"><h4 align="center">DrugBank Database</h4></a>
+
+<p align="justify"><b>Description:</b> The DrugBank database is a unique bioinformatics and cheminformatics resource that combines detailed drug data with comprehensive drug target information.</p>
+
+
+
+
+    <p align="justify"><b>Institution:</b> University of Alberta and The Metabolomics Innovation Centre</p>
+
+
+
+    <p align="justify"><b>Lab:</b> David Wishart</p>
+
+
+<hr>
+
+            
+        
+            
+                
+
+
+<a href="https://www.molport.com"><h4 align="center">MolPort</h4></a>
+
+<p align="justify"><b>Description:</b> MolPort has collected the catalogs of all the major chemical suppliers that cater to drug discovery and created a consolidated database of commercially available screening compounds, building blocks and virtual compounds. These catalogs are up to date and typically synchronized with suppliers inventory daily. MolPort tracks compounds ordered via its platform, and monitors how well suppliers fulfil orders.</p>
+
+
+    <p align="justify"><b>Organization:</b> MolPort, Inc.</p>
+
+
+
+
+
+
+<hr>
+
+            
+        
+            
+        
+            
+                
+
+
+<a href="https://www.enaminestore.com/search#real"><h4 align="center">Enamine REAL Space</h4></a>
+
+<p align="justify"><b>Description:</b> The REAL Space comprises 13 billion make-on-demand molecules and is currently the largest offer of commercially available compounds. The REAL compounds in the Space are assembled via more than 180 well-validated parallel synthesis protocols applied to over 115 000 qualified reagents and building blocks. The synthetic protocols include standard and advanced one-pot procedures. They differ in the number of steps, type of purification, and compound handling, and therefore in the effort required to deliver the products.</p>
+
+
+    <p align="justify"><b>Organization:</b> Enamine Ltd</p>
+
+
+
+
+
+
+<hr>
+
+            
+        
+            
+                
+
+
+<a href="http://cheminfo.charite.de/superdrug2"><h4 align="center">SuperDRUG</h4></a>
+
+<p align="justify"><b>Description:</b> SuperDRUG2 database is a unique, one-stop resource for approved/marketed drugs, containing more than 4,600 active pharmaceutical ingredients. We annotated drugs with regulatory details, chemical structures (2D and 3D), dosage, biological targets, physicochemical properties, external identifiers, side-effects and pharmacokinetic data. Different search mechanisms allow navigation through the chemical space of approved drugs. A 2D chemical structure search is provided in addition to a 3D superposition feature that superposes a drug with ligands already known to be found in the experimentally determined protein-ligand complexes.</p>
+
+
+
+
+    <p align="justify"><b>Institution:</b> University Medicine Berlin</p>
+
+
+
+    <p align="justify"><b>Lab:</b> Structural Bioinformatics Group</p>
+
+
+<hr>
+
+            
+        
+            
+                
+
+
+<a href="https://simtk.org/projects/sweetlead"><h4 align="center">SWEETLEAD</h4></a>
+
+<p align="justify"><b>Description:</b> The SWEETLEAD database is a cheminformatics database of medicines, drugs, and herbal isolates.  It provides a resource for chemical structures and was built by pulling data from several public chemical databases.</p>
+
+
+
+
+
+
+    <p align="justify"><b>Lab:</b> Paul Novick and Vijay Pande</p>
+
+
+<hr>
+
+            
+        
+            
+        
+            
+                
+
+
+<a href="https://www.biosolveit.de/CoLibri/spaces.html"><h4 align="center">WuXi GalaXi</h4></a>
+
+<p align="justify"><b>Description:</b> The first version of this new chemical space approaches 2 billion tangible molecules — 1,686,371,588 (or 1,7*109) to be exact. In close collaboration with WuXi LabNetwork we created a novel chemical space ready for you to download and search. This space contains a lot of unique chemical intellectual property (IP) for your research, and compounds can be created on demand upon request with WuXi. GalaXi has been shaped from WuXi LabNetwork&rsquo;s building blocks and reaction schemes that have been properly checked to deliver high quality results. High quality processing has been ensured using our CoLibri software.</p>
+
+
+    <p align="justify"><b>Organization:</b> BioSolveIT, WuXi LabNetwork</p>
+
+
+
+
+
+
+<hr>
+
+            
+        
+            
+                
+
+
+<a href="https://zinc15.docking.org"><h4 align="center">Zinc15 Database</h4></a>
+
+<p align="justify"><b>Description:</b> Database of commercially-available compounds for virtual screening. ZINC contains over 230 million purchasable compounds in ready-to-dock, 3D formats. ZINC also contains over 750 million purchasable compounds you can search for analogs in under a minute.</p>
+
+
+
+
+    <p align="justify"><b>Institution:</b> University of California, San Francisco</p>
+
+
+
+    <p align="justify"><b>Lab:</b> John Irwin, Brian Shoichet, and others</p>
+
+
+<hr>
+
+            
+        
+
+</main>
+
+
+        <footer>
+            <a href="https://molssi.org/"><img src="/images/org-logos/molssi_logo.png" style="width:10%"></a>
+            <a href="https://bioexcel.eu/"><img src="/images/org-logos/bioexcel_logo.png" style="width:10%"></a>
+        
+
+            <h3><u>Endorsements</u></h3>
+            
+
+
+ 
+ 
+  
+  
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+<style>
+
+.marquee {
+  height: 150px;
+  width: 750px;
+  overflow: hidden;
+  margin: auto;
+  box-sizing: border-box;
+  position: relative;
+  max-width: 750px;
+}
+
+.marquee--inner {
+  display: flex;
+  width: 1500px;
+  height: 150px;
+  margin: 0px 0;
+  position: absolute;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee--inner:hover {
+  animation-play-state: paused;
+}
+
+ 
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -750px; }
+}
+
+
+.endorsement-elements {
+   width: 250px;  
+   display: inline-block;
+   max-height: 150px;
+   flex-grow: 1;
+   align-self: center;
+}
+
+.endorsement-elements:hover {
+  transform: scale(0.9);
+  opacity: .8;
+  cursor: pointer;
+}
+
+.endorse-img {
+    display: block;
+    max-width: 250px;
+    max-height: calc(150px - 10px - 18px - 4px);  
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+</style>
+
+
+
+
+
+
+<div class="marquee">
+  <div class="marquee--inner">
+     
+        
+        
+          
+        
+          
+            <div align="center" class='endorsement-elements' style="margin:0;padding:0">
+              
+                <a href="https://www.deshawresearch.com/">
+              
+                <img class="endorse-img" src="/images/org-logos/DESRES_Logo_K.svg" alt="" />
+              
+                </a>
+              
+                <h4>D. E. Shaw Research</h4> 
+            </div>
+          
+        
+          
+            <div align="center" class='endorsement-elements' style="margin:0;padding:0">
+              
+                <a href="https://foldingathome.org/">
+              
+                <img class="endorse-img" src="/images/org-logos/fah.png" alt="" />
+              
+                </a>
+              
+                <h4>Folding @ Home</h4> 
+            </div>
+          
+        
+          
+        
+          
+            <div align="center" class='endorsement-elements' style="margin:0;padding:0">
+              
+                <a href="https://zhanglab.ccmb.med.umich.edu/">
+              
+                <img class="endorse-img" src="/images/org-logos/zhang-lab.jpg" alt="" />
+              
+                </a>
+              
+                <h4>Zhang Lab</h4> 
+            </div>
+          
+        
+     
+        
+        
+          
+        
+          
+            <div align="center" class='endorsement-elements' style="margin:0;padding:0">
+              
+                <a href="https://www.deshawresearch.com/">
+              
+                <img class="endorse-img" src="/images/org-logos/DESRES_Logo_K.svg" alt="" />
+              
+                </a>
+              
+                <h4>D. E. Shaw Research</h4> 
+            </div>
+          
+        
+          
+            <div align="center" class='endorsement-elements' style="margin:0;padding:0">
+              
+                <a href="https://foldingathome.org/">
+              
+                <img class="endorse-img" src="/images/org-logos/fah.png" alt="" />
+              
+                </a>
+              
+                <h4>Folding @ Home</h4> 
+            </div>
+          
+        
+          
+        
+          
+            <div align="center" class='endorsement-elements' style="margin:0;padding:0">
+              
+                <a href="https://zhanglab.ccmb.med.umich.edu/">
+              
+                <img class="endorse-img" src="/images/org-logos/zhang-lab.jpg" alt="" />
+              
+                </a>
+              
+                <h4>Zhang Lab</h4> 
+            </div>
+          
+        
+    
+  </div>
+</div>
+
+            <p class="copyright text-muted">&copy; All rights reserved. COVID-19 Molecular Structure and Therapeutics Hub is lead by <a href="http://molssi.org/">MolSSI</a> &amp; <a href="https://bioexcel.eu">BioExcel</a>. The MolSSI is supported by the U.S. National Science Foundation through grant number OAC-1547580. <a href="https://ec.europa.eu/programmes/horizon2020">BioExcel is funded by the European Union Horizon 2020</a> program under grant agreements <a href="https://cordis.europa.eu/project/id/823830">823830</a>, <a href="https://cordis.europa.eu/project/id/675728">675728</a></p>
+        </footer>
+
+        
+
+
+
+    </body>
+
+</html>
+

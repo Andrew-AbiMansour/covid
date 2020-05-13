@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>External resources</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://covid.molssi.org/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+
+ <meta name="generator" content="Hugo 0.57.2" />
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">External resources</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Biology<span class="caret"></span></a>
+                                    <ul class ="dropdown-menu">
+                                        
+                                            <li><a href="/proteins/">Proteins</a></li>
+                                        
+                                            <li><a href="/targets/">Target Modalities</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            
+                            
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Viral/Host Structural Data<span class="caret"></span></a>
+                                    <ul class ="dropdown-menu">
+                                        
+                                            <li><a href="/structures">Structures</a></li>
+                                        
+                                            <li><a href="/models">Models</a></li>
+                                        
+                                            <li><a href="/simulations">Simulations</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            
+                            
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Therapeutics<span class="caret"></span></a>
+                                    <ul class ="dropdown-menu">
+                                        
+                                            <li><a href="/therapeutics">All Therapeutics</a></li>
+                                        
+                                            <li><a href="/therapeutics#antiviral">Antivirals</a></li>
+                                        
+                                            <li><a href="/therapeutics#small-molecule">Small Molecules</a></li>
+                                        
+                                            <li><a href="/therapeutics#peptide">Peptides</a></li>
+                                        
+                                            <li><a href="/therapeutics#immunotherapy">Immunotherapies</a></li>
+                                        
+                                            <li><a href="/therapeutics#antibody">Antibodies</a></li>
+                                        
+                                            <li><a href="/therapeutics#ext_res_therapeutics">Drug Databases</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            
+                            
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Contribution<span class="caret"></span></a>
+                                    <ul class ="dropdown-menu">
+                                        
+                                            <li><a href="/contributors/">Contributors</a></li>
+                                        
+                                            <li><a href="/contributing/">How to Contribute</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            
+                            
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">About<span class="caret"></span></a>
+                                    <ul class ="dropdown-menu">
+                                        
+                                            <li><a href="/about/">About The Hub</a></li>
+                                        
+                                            <li><a href="/links/">External Resources</a></li>
+                                        
+                                            <li><a href="/glossary/">Glossary</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="/"><i class="fa fa-home"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/molssi/covid"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="mailto:info@molssi.org"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/MolSSI_NSF/"><i class="fa fa-twitter"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+
+
+
+<main>
+    <div>
+        <h2>External resources</h2>
+        <h4>Links to external resources and databases for structures and models</h4>
+        
+        
+        
+        <h5 align="left">
+        Data classification:
+            <ul style="text-align:justify;">
+                
+                    
+                    <li><a href="#ext_res_Biology"><b>Biology:</b></a> General information and functionality of the virus as a whole.</li>
+                
+                    
+                    <li><a href="#ext_res_Structures"><b>Structures:</b></a> Data defining structures determined by experimental methods and referenced via a unique identifier such as a PDB ID.</li>
+                
+                    
+                    <li><a href="#ext_res_Models"><b>Models:</b></a> Derived, integrated, or refined structures from multiple data sources prepared for different computational tasks.</li>
+                
+                    
+                    <li><a href="#ext_res_Therapeutics"><b>Therapeutics:</b></a> Molecules, drugs, antibodies, peptides, etc. which implement targets.</li>
+                
+                <li><a href="#ext_res_Publications"><b> Publications:</b></a> Databases containing pulications, peer-reviewed and pre-prints, relevant to COVID-19</li>
+            </ul>
+        </h5>
+        <hr class="hr-thick">
+
+        <h3 class="anchor" id="ext_res_Biology"> Biology </h3>
+        
+            
+        
+            
+                
+
+
+<a href="https://www.youtube.com/watch?v=8_bOhZd6ieM"><h4 align="center">Coronaviruses 101- Focus on Molecular Virology</h4></a>
+
+<p align="justify"><b>Description:</b> In this video, Dr. Glaunsinger talks about the evolution, genetics, and virulence of coronaviruses.</p>
+
+
+
+
+    <p align="justify"><b>Institution:</b> UC Berkeley and Innovative Genomics Institute</p>
+
+
+
+    <p align="justify"><b>Lab:</b> Glaunsinger lab</p>
+
+
+<hr>
+
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+
+        
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+        
+
+        <h3 class="anchor" id="ext_res_Models"> Models </h3>
+        
+            
+                
+
+
+<a href="https://zhanglab.ccmb.med.umich.edu/COVID-19/"><h4 align="center">Structure Models of All Mature Peptides in 2019-NCoV Genome by C-I-TASSER</h4></a>
+
+<p align="justify"><b>Description:</b> This page contains 3D structural models and function annotation for all proteins encoded by the genome of 2019-nCoV, also known as SARS-CoV-2, which is the novel coronavirus causing the COVID-19 pneumonia. The structure models are generated by the C-I-TASSER pipeline, which utilizes deep convolutional neural-network based contact-map predictions to guide the I-TASSER fragment assembly simulations. Benchmark and blind CASP tests showed that C-I-TASSER generates models with a higher accuracy than I-TASSER does, especially for the protein targets lack of homologous templates. For multi-domain targets, the C-I-TASSER structure of individual domains are assembled by DEMO into full length structure.</p>
+
+
+
+
+    <p align="justify"><b>Institution:</b> University of Michigan</p>
+
+
+
+    <p align="justify"><b>Lab:</b> Yang Zhang</p>
+
+
+<hr>
+
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                
+
+
+<a href="https://drive.google.com/drive/folders/1S5qJtCnK00NrcbwwBNgImUMewhiBkyPa"><h4 align="center">Tristan Croll ISOLDE COVID-19 Models</h4></a>
+
+<p align="justify"><b>Description:</b> Models refined by Tristan Croll in ISOLDE</p>
+
+
+
+
+    <p align="justify"><b>Institution:</b> Cambridge Institute for Medical Research</p>
+
+
+
+
+<hr>
+
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                
+
+
+<a href="https://pubchem.ncbi.nlm.nih.gov"><h4 align="center">PubChem</h4></a>
+
+<p align="justify"><b>Description:</b> PubChem is a public chemistry database at the National Institutes of Health (NIH). Since the launch in 2004, PubChem has become a key chemical information resource for scientists, students, and the general public. Each month our website and programmatic services provide data to several million users worldwide. PubChem mostly contains small molecules, but also larger molecules such as nucleotides, carbohydrates, lipids, peptides, and chemically-modified macromolecules. We collect information on chemical structures, identifiers, chemical and physical properties, biological activities, patents, health, safety, toxicity data, and many others.</p>
+
+
+
+
+    <p align="justify"><b>Institution:</b> NIH</p>
+
+
+
+
+<hr>
+
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                
+
+
+<a href="https://github.com/thorn-lab/coronavirus_structural_task_force"><h4 align="center">Structural Biology Task Force GitHub Page</h4></a>
+
+<p align="justify"><b>Description:</b> A global public resource for the structures from beta-coronavirus with a focus on SARS-CoV and SARS-CoV-2.</p>
+
+
+    <p align="justify"><b>Organization:</b> Coronavirus Structural Biology Task Force</p>
+
+
+
+
+
+
+<hr>
+
+            
+        
+            
+        
+            
+        
+
+        <h3 class="anchor" id="ext_res_Therapeutics"> Therapeutics and Drug Databases </h3>
+        
+            
+        
+            
+        
+            
+                
+
+
+<a href="https://clue.io/repurposing"><h4 align="center">Drug Repurposing Hub</h4></a>
+
+<p align="justify"><b>Description:</b> The Drug Repurposing Hub is a curated and annotated collection of FDA-approved drugs, clinical trial drugs, and pre-clinical tool compounds with a companion information resource. Order library plates to screen yourself or collaborate with the Broad Institute’s Center for the Development of Therapeutics to see if an existing drug may work against your novel target, model system, or indication. While the collection will undoubtedly reveal new uses for developed drugs, its true power is unlocked when applied to discover new biological insights and disease mechanisms.</p>
+
+
+
+
+    <p align="justify"><b>Institution:</b> University of California, San Francisco</p>
+
+
+
+    <p align="justify"><b>Lab:</b> John Irwin, Brian Shoichet, and others</p>
+
+
+<hr>
+
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                
+
+
+<a href="https://www.drugbank.ca"><h4 align="center">DrugBank Database</h4></a>
+
+<p align="justify"><b>Description:</b> The DrugBank database is a unique bioinformatics and cheminformatics resource that combines detailed drug data with comprehensive drug target information.</p>
+
+
+
+
+    <p align="justify"><b>Institution:</b> University of Alberta and The Metabolomics Innovation Centre</p>
+
+
+
+    <p align="justify"><b>Lab:</b> David Wishart</p>
+
+
+<hr>
+
+            
+        
+            
+                
+
+
+<a href="https://www.molport.com"><h4 align="center">MolPort</h4></a>
+
+<p align="justify"><b>Description:</b> MolPort has collected the catalogs of all the major chemical suppliers that cater to drug discovery and created a consolidated database of commercially available screening compounds, building blocks and virtual compounds. These catalogs are up to date and typically synchronized with suppliers inventory daily. MolPort tracks compounds ordered via its platform, and monitors how well suppliers fulfil orders.</p>
+
+
+    <p align="justify"><b>Organization:</b> MolPort, Inc.</p>
+
+
+
+
+
+
+<hr>
+
+            
+        
+            
+        
+            
+                
+
+
+<a href="https://www.enaminestore.com/search#real"><h4 align="center">Enamine REAL Space</h4></a>
+
+<p align="justify"><b>Description:</b> The REAL Space comprises 13 billion make-on-demand molecules and is currently the largest offer of commercially available compounds. The REAL compounds in the Space are assembled via more than 180 well-validated parallel synthesis protocols applied to over 115 000 qualified reagents and building blocks. The synthetic protocols include standard and advanced one-pot procedures. They differ in the number of steps, type of purification, and compound handling, and therefore in the effort required to deliver the products.</p>
+
+
+    <p align="justify"><b>Organization:</b> Enamine Ltd</p>
+
+
+
+
+
+
+<hr>
+
+            
+        
+            
+                
+
+
+<a href="http://cheminfo.charite.de/superdrug2"><h4 align="center">SuperDRUG</h4></a>
+
+<p align="justify"><b>Description:</b> SuperDRUG2 database is a unique, one-stop resource for approved/marketed drugs, containing more than 4,600 active pharmaceutical ingredients. We annotated drugs with regulatory details, chemical structures (2D and 3D), dosage, biological targets, physicochemical properties, external identifiers, side-effects and pharmacokinetic data. Different search mechanisms allow navigation through the chemical space of approved drugs. A 2D chemical structure search is provided in addition to a 3D superposition feature that superposes a drug with ligands already known to be found in the experimentally determined protein-ligand complexes.</p>
+
+
+
+
+    <p align="justify"><b>Institution:</b> University Medicine Berlin</p>
+
+
+
+    <p align="justify"><b>Lab:</b> Structural Bioinformatics Group</p>
+
+
+<hr>
+
+            
+        
+            
+                
+
+
+<a href="https://simtk.org/projects/sweetlead"><h4 align="center">SWEETLEAD</h4></a>
+
+<p align="justify"><b>Description:</b> The SWEETLEAD database is a cheminformatics database of medicines, drugs, and herbal isolates.  It provides a resource for chemical structures and was built by pulling data from several public chemical databases.</p>
+
+
+
+
+
+
+    <p align="justify"><b>Lab:</b> Paul Novick and Vijay Pande</p>
+
+
+<hr>
+
+            
+        
+            
+        
+            
+                
+
+
+<a href="https://www.biosolveit.de/CoLibri/spaces.html"><h4 align="center">WuXi GalaXi</h4></a>
+
+<p align="justify"><b>Description:</b> The first version of this new chemical space approaches 2 billion tangible molecules — 1,686,371,588 (or 1,7*109) to be exact. In close collaboration with WuXi LabNetwork we created a novel chemical space ready for you to download and search. This space contains a lot of unique chemical intellectual property (IP) for your research, and compounds can be created on demand upon request with WuXi. GalaXi has been shaped from WuXi LabNetwork&rsquo;s building blocks and reaction schemes that have been properly checked to deliver high quality results. High quality processing has been ensured using our CoLibri software.</p>
+
+
+    <p align="justify"><b>Organization:</b> BioSolveIT, WuXi LabNetwork</p>
+
+
+
+
+
+
+<hr>
+
+            
+        
+            
+                
+
+
+<a href="https://zinc15.docking.org"><h4 align="center">Zinc15 Database</h4></a>
+
+<p align="justify"><b>Description:</b> Database of commercially-available compounds for virtual screening. ZINC contains over 230 million purchasable compounds in ready-to-dock, 3D formats. ZINC also contains over 750 million purchasable compounds you can search for analogs in under a minute.</p>
+
+
+
+
+    <p align="justify"><b>Institution:</b> University of California, San Francisco</p>
+
+
+
+    <p align="justify"><b>Lab:</b> John Irwin, Brian Shoichet, and others</p>
+
+
+<hr>
+
+            
+        
+
+        <h3 class="anchor" id="ext_res_Publications"> Publications </h3>
+        
+            
+        
+            
+        
+            
+        
+            
+                
+
+
+<a href="https://allenai.org/data/cord-19"><h4 align="center">CORD-19: COVID-19 Open Research Dataset</h4></a>
+
+<p align="justify"><b>Description:</b> CORD-19 provides over 52,000 scholarly articles about COVID-19 and the coronavirus family of viruses for use by the research community. This dataset is updated weekly as new research is published in peer-reviewed publications and archives, such as bioRxiv, medRxiv and more.</p>
+
+
+    <p align="justify"><b>Organization:</b> Allen Institute for AI</p>
+
+
+
+
+
+
+<hr>
+
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                
+
+
+<a href="https://pubchem.ncbi.nlm.nih.gov"><h4 align="center">PubChem</h4></a>
+
+<p align="justify"><b>Description:</b> PubChem is a public chemistry database at the National Institutes of Health (NIH). Since the launch in 2004, PubChem has become a key chemical information resource for scientists, students, and the general public. Each month our website and programmatic services provide data to several million users worldwide. PubChem mostly contains small molecules, but also larger molecules such as nucleotides, carbohydrates, lipids, peptides, and chemically-modified macromolecules. We collect information on chemical structures, identifiers, chemical and physical properties, biological activities, patents, health, safety, toxicity data, and many others.</p>
+
+
+
+
+    <p align="justify"><b>Institution:</b> NIH</p>
+
+
+
+
+<hr>
+
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+
+
+    </div>
+</main>
+
+
+        <footer>
+            <a href="https://molssi.org/"><img src="/images/org-logos/molssi_logo.png" style="width:10%"></a>
+            <a href="https://bioexcel.eu/"><img src="/images/org-logos/bioexcel_logo.png" style="width:10%"></a>
+        
+
+            <h3><u>Endorsements</u></h3>
+            
+
+
+ 
+ 
+  
+  
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+<style>
+
+.marquee {
+  height: 150px;
+  width: 750px;
+  overflow: hidden;
+  margin: auto;
+  box-sizing: border-box;
+  position: relative;
+  max-width: 750px;
+}
+
+.marquee--inner {
+  display: flex;
+  width: 1500px;
+  height: 150px;
+  margin: 0px 0;
+  position: absolute;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee--inner:hover {
+  animation-play-state: paused;
+}
+
+ 
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -750px; }
+}
+
+
+.endorsement-elements {
+   width: 250px;  
+   display: inline-block;
+   max-height: 150px;
+   flex-grow: 1;
+   align-self: center;
+}
+
+.endorsement-elements:hover {
+  transform: scale(0.9);
+  opacity: .8;
+  cursor: pointer;
+}
+
+.endorse-img {
+    display: block;
+    max-width: 250px;
+    max-height: calc(150px - 10px - 18px - 4px);  
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+</style>
+
+
+
+
+
+
+<div class="marquee">
+  <div class="marquee--inner">
+     
+        
+        
+          
+        
+          
+            <div align="center" class='endorsement-elements' style="margin:0;padding:0">
+              
+                <a href="https://www.deshawresearch.com/">
+              
+                <img class="endorse-img" src="/images/org-logos/DESRES_Logo_K.svg" alt="" />
+              
+                </a>
+              
+                <h4>D. E. Shaw Research</h4> 
+            </div>
+          
+        
+          
+            <div align="center" class='endorsement-elements' style="margin:0;padding:0">
+              
+                <a href="https://foldingathome.org/">
+              
+                <img class="endorse-img" src="/images/org-logos/fah.png" alt="" />
+              
+                </a>
+              
+                <h4>Folding @ Home</h4> 
+            </div>
+          
+        
+          
+        
+          
+            <div align="center" class='endorsement-elements' style="margin:0;padding:0">
+              
+                <a href="https://zhanglab.ccmb.med.umich.edu/">
+              
+                <img class="endorse-img" src="/images/org-logos/zhang-lab.jpg" alt="" />
+              
+                </a>
+              
+                <h4>Zhang Lab</h4> 
+            </div>
+          
+        
+     
+        
+        
+          
+        
+          
+            <div align="center" class='endorsement-elements' style="margin:0;padding:0">
+              
+                <a href="https://www.deshawresearch.com/">
+              
+                <img class="endorse-img" src="/images/org-logos/DESRES_Logo_K.svg" alt="" />
+              
+                </a>
+              
+                <h4>D. E. Shaw Research</h4> 
+            </div>
+          
+        
+          
+            <div align="center" class='endorsement-elements' style="margin:0;padding:0">
+              
+                <a href="https://foldingathome.org/">
+              
+                <img class="endorse-img" src="/images/org-logos/fah.png" alt="" />
+              
+                </a>
+              
+                <h4>Folding @ Home</h4> 
+            </div>
+          
+        
+          
+        
+          
+            <div align="center" class='endorsement-elements' style="margin:0;padding:0">
+              
+                <a href="https://zhanglab.ccmb.med.umich.edu/">
+              
+                <img class="endorse-img" src="/images/org-logos/zhang-lab.jpg" alt="" />
+              
+                </a>
+              
+                <h4>Zhang Lab</h4> 
+            </div>
+          
+        
+    
+  </div>
+</div>
+
+            <p class="copyright text-muted">&copy; All rights reserved. COVID-19 Molecular Structure and Therapeutics Hub is lead by <a href="http://molssi.org/">MolSSI</a> &amp; <a href="https://bioexcel.eu">BioExcel</a>. The MolSSI is supported by the U.S. National Science Foundation through grant number OAC-1547580. <a href="https://ec.europa.eu/programmes/horizon2020">BioExcel is funded by the European Union Horizon 2020</a> program under grant agreements <a href="https://cordis.europa.eu/project/id/823830">823830</a>, <a href="https://cordis.europa.eu/project/id/675728">675728</a></p>
+        </footer>
+
+        
+
+
+
+    </body>
+
+</html>
+

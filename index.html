@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>COVID-19 Molecular Structure and Therapeutics Hub</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://covid.molssi.org/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+
+ <meta name="generator" content="Hugo 0.57.2" />
+        
+            <link href="/index.xml" rel="alternate" type="application/rss&#43;xml" title="COVID-19 Molecular Structure and Therapeutics Hub" />
+            <link href="/index.xml" rel="feed" type="application/rss&#43;xml" title="COVID-19 Molecular Structure and Therapeutics Hub" />
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">COVID-19 Molecular Structure and Therapeutics Hub</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Biology<span class="caret"></span></a>
+                                    <ul class ="dropdown-menu">
+                                        
+                                            <li><a href="/proteins/">Proteins</a></li>
+                                        
+                                            <li><a href="/targets/">Target Modalities</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            
+                            
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Viral/Host Structural Data<span class="caret"></span></a>
+                                    <ul class ="dropdown-menu">
+                                        
+                                            <li><a href="/structures">Structures</a></li>
+                                        
+                                            <li><a href="/models">Models</a></li>
+                                        
+                                            <li><a href="/simulations">Simulations</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            
+                            
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Therapeutics<span class="caret"></span></a>
+                                    <ul class ="dropdown-menu">
+                                        
+                                            <li><a href="/therapeutics">All Therapeutics</a></li>
+                                        
+                                            <li><a href="/therapeutics#antiviral">Antivirals</a></li>
+                                        
+                                            <li><a href="/therapeutics#small-molecule">Small Molecules</a></li>
+                                        
+                                            <li><a href="/therapeutics#peptide">Peptides</a></li>
+                                        
+                                            <li><a href="/therapeutics#immunotherapy">Immunotherapies</a></li>
+                                        
+                                            <li><a href="/therapeutics#antibody">Antibodies</a></li>
+                                        
+                                            <li><a href="/therapeutics#ext_res_therapeutics">Drug Databases</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            
+                            
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Contribution<span class="caret"></span></a>
+                                    <ul class ="dropdown-menu">
+                                        
+                                            <li><a href="/contributors/">Contributors</a></li>
+                                        
+                                            <li><a href="/contributing/">How to Contribute</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            
+                            
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">About<span class="caret"></span></a>
+                                    <ul class ="dropdown-menu">
+                                        
+                                            <li><a href="/about/">About The Hub</a></li>
+                                        
+                                            <li><a href="/links/">External Resources</a></li>
+                                        
+                                            <li><a href="/glossary/">Glossary</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="/"><i class="fa fa-home"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/molssi/covid"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="mailto:info@molssi.org"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/MolSSI_NSF/"><i class="fa fa-twitter"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<main>
+    <div class="intro">
+        
+        <h2>COVID-19 Molecular Structure and Therapeutics Hub</h2>
+        <h3>Aggregating critical information to accelerate drug discovery for the molecular modeling and simulation community.</h3>
+        
+
+        <img style="width:60%;" src="images/sars-cov-2-600x300.jpg">
+
+        <h3> What is this hub about? </h3>
+        <p align="justify" style="font-size:120%;">
+            This site provides a community-driven data repository and curation service for molecular structures, models,
+            therapeutics, and simulations related to computational research related to therapeutic opportunities
+            for COVID-19 (caused by the SARS-CoV-2 coronavirus). For more info about this project,
+            see the <a href="/about">about</a> page.
+            This is a public process and we encourage people to not only submit
+            data through <a href="https://github.com/MolSSI/covid/pulls">Pull Requests</a> or the
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1gtN4yts8D9QfQlnZUWpjHvs86Zgz3AJHmTug-ehpYYiGPA/viewform?usp=sf_link">Large Data Submission Request form</a>,
+            but we also encourage people to be part of our <a href="/teams">Review Teams</a> and help look over the data.
+            For instructions on how to contribute, please see the <a href="/contributing">contributing</a> page.
+        </p>
+        <p align="left" style="font-size:120%;">
+            Quick Terminology <a href="https://covid.molssi.org//glossary">[Full Glossary]</a>:
+        </p>
+            <ul style="text-align:left;font-size:120%;">
+                
+                    
+                    <li>
+                        <a href="/targets"><b>Targets:</b></a> The biological mechanisms and functions which can be exploited to reduce, prevent, or treat the virus.
+                    </li>
+                
+                    
+                    <li>
+                        <a href="/proteins"><b>Proteins:</b></a> The biological proteins associated with the SARS-CoV-2 virus and host.
+                    </li>
+                
+                    
+                    <li>
+                        <a href="/structures"><b>Structures:</b></a> Data defining structures determined by experimental methods and referenced via a unique identifier such as a PDB ID.
+                    </li>
+                
+                    
+                    <li>
+                        <a href="/models"><b>Models:</b></a> Derived, integrated, or refined structures from multiple data sources prepared for different computational tasks.
+                    </li>
+                
+                    
+                    <li>
+                        <a href="/therapeutics"><b>Therapeutics:</b></a> Molecules, drugs, antibodies, peptides, etc. which implement targets.
+                    </li>
+                
+                    
+                    <li>
+                        <a href="/simulations"><b>Simulations:</b></a> The datasets produced as a result of applying the models to different scientific techniques.
+                    </li>
+                
+                    
+                    <li>
+                        <a href="/links"><b>Links:</b></a> External structures, models, drug libraries, and other resources
+                    </li>
+                
+            </ul>
+
+        
+        
+
+        <div id="data">
+            <h3>Targets:</h3>
+            <p>
+                
+                <a href="https://covid.molssi.org//targets/#3clpro-mpro-activity"><kbd class="item-tag" style="">3CLpro / Mpro Activity</kbd></a><br>
+                
+                <a href="https://covid.molssi.org//targets/#inhibition-of-plpro-protease-activity"><kbd class="item-tag" style="">Inhibition of PLpro Protease Activity</kbd></a><br>
+                
+                <a href="https://covid.molssi.org//targets/#host-immune-response"><kbd class="item-tag" style="">Host Immune Response</kbd></a><br>
+                
+                <a href="https://covid.molssi.org//targets/#inhibition-of-nsp13-helicase-activity"><kbd class="item-tag" style="">Inhibition of Nsp13 Helicase Activity</kbd></a><br>
+                
+                <a href="https://covid.molssi.org//targets/#blocking-sars-cov-2-spike-protein-binding-to-human-ace2-receptor"><kbd class="item-tag" style="">Blocking SARS-CoV-2 Spike Protein Binding to Human ACE2 Receptor</kbd></a><br>
+                
+                <a href="https://covid.molssi.org//targets/#inhibiting-cleavage-of-the-sars-cov-2-spike-protein"><kbd class="item-tag" style="">Inhibiting Cleavage of the SARS-CoV-2 Spike Protein</kbd></a><br>
+                
+                <a href="https://covid.molssi.org//targets/#inhibition-of-formation-of-the-viral-fusion-core"><kbd class="item-tag" style="">Inhibition of Formation of the Viral Fusion Core</kbd></a><br>
+                
+                <a href="https://covid.molssi.org//targets/#inhibition-of-viral-polymerases"><kbd class="item-tag" style="">Inhibition of Viral Polymerases</kbd></a><br>
+                
+            </p>
+            <h3>Proteins:</h3>
+            <p>
+                
+                <a href="https://covid.molssi.org//proteins/#sars-cov-2-main-protease-3clpro-or-nsp5"><kbd class="bg-primary" style="">3CLpro</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#angiotensin-converting-enzyme-2-ace2"><kbd class="bg-primary" style="">ACE2</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#sodium-dependent-neutral-amnio-acid-transporter-boat1"><kbd class="bg-primary" style="">BoAT1</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#envelope-small-membrane-protein"><kbd class="bg-primary" style="">E protein</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#ab-receptor-in-host-cells-fcr"><kbd class="bg-primary" style="">Fc receptor</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#furin-pace"><kbd class="bg-primary" style="">Furin</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#helicase-coronavirus-nonstructural-protein-13-nsp13"><kbd class="bg-primary" style="">Helicase</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#interleukin-6-il-6-receptor"><kbd class="bg-primary" style="">IL6R</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#membrane-glycoprotein"><kbd class="bg-primary" style="">M protein</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#nucleoprotein"><kbd class="bg-primary" style="">N protein</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#coronavirus-nonstructural-protein-1"><kbd class="bg-primary" style="">NSP1</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#coronavirus-nonstructural-protein-10"><kbd class="bg-primary" style="">NSP10</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#coronavirus-nonstructural-protein-11"><kbd class="bg-primary" style="">NSP11</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#coronavirus-nonstructural-protein-14"><kbd class="bg-primary" style="">NSP14</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#coronavirus-nonstructural-protein-15"><kbd class="bg-primary" style="">NSP15</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#coronavirus-nonstructural-protein-16"><kbd class="bg-primary" style="">NSP16</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#coronavirus-nonstructural-protein-2"><kbd class="bg-primary" style="">NSP2</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#coronavirus-nonstructural-protein-4"><kbd class="bg-primary" style="">NSP4</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#coronavirus-nonstructural-protein-6"><kbd class="bg-primary" style="">NSP6</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#coronavirus-nonstructural-protein-7"><kbd class="bg-primary" style="">NSP7</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#coronavirus-nonstructural-protein-8"><kbd class="bg-primary" style="">NSP8</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#coronavirus-nonstructural-protein-9"><kbd class="bg-primary" style="">NSP9</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#coronavirus-open-reading-frame-10"><kbd class="bg-primary" style="">ORF10</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#coronavirus-open-reading-frame-3a"><kbd class="bg-primary" style="">ORF3a</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#coronavirus-open-reading-frame-6"><kbd class="bg-primary" style="">ORF6</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#coronavirus-open-reading-frame-7a"><kbd class="bg-primary" style="">ORF7a</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#coronavirus-open-reading-frame-7b"><kbd class="bg-primary" style="">ORF7b</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#coronavirus-open-reading-frame-8"><kbd class="bg-primary" style="">ORF8</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#programmed-cell-death-factor-1"><kbd class="bg-primary" style="">PD-1</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#sars-cov-2-papain-like-protease-nsp3"><kbd class="bg-primary" style="">PLpro</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#sars-cov-2-rna-polymerase-nsp12"><kbd class="bg-primary" style="">RdRP</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#transmembrane-protease-serine-2"><kbd class="bg-primary" style="">TMPRSS2</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#viral-spike-fusion-core"><kbd class="bg-primary" style="">fusion core</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#p38-mitogen-activated-protein-kinase-mpak"><kbd class="bg-primary" style="">p38</kbd></a>
+                
+                <a href="https://covid.molssi.org//proteins/#sars-cov-2-spike-s-glycoprotein"><kbd class="bg-primary" style="">spike</kbd></a>
+                
+            </p>
+            <h3>Structures:</h3>
+            <p>
+                
+                <a href="https://covid.molssi.org//structures/#sars-cov-2-main-protease-3clpro-or-nsp5"><kbd class="alert-danger" style="">3CLpro</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#angiotensin-converting-enzyme-2-ace2"><kbd class="alert-danger" style="">ACE2</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#sodium-dependent-neutral-amnio-acid-transporter-boat1"><kbd class="alert-danger" style="">BoAT1</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#envelope-small-membrane-protein"><kbd class="alert-danger" style="">E protein</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#ab-receptor-in-host-cells-fcr"><kbd class="alert-danger" style="">Fc receptor</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#furin-pace"><kbd class="alert-danger" style="">Furin</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#helicase-coronavirus-nonstructural-protein-13-nsp13"><kbd class="alert-danger" style="">Helicase</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#interleukin-6-il-6-receptor"><kbd class="alert-danger" style="">IL6R</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#membrane-glycoprotein"><kbd class="alert-danger" style="">M protein</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#nucleoprotein"><kbd class="alert-danger" style="">N protein</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#coronavirus-nonstructural-protein-1"><kbd class="alert-danger" style="">NSP1</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#coronavirus-nonstructural-protein-10"><kbd class="alert-danger" style="">NSP10</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#coronavirus-nonstructural-protein-11"><kbd class="alert-danger" style="">NSP11</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#coronavirus-nonstructural-protein-14"><kbd class="alert-danger" style="">NSP14</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#coronavirus-nonstructural-protein-15"><kbd class="alert-danger" style="">NSP15</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#coronavirus-nonstructural-protein-16"><kbd class="alert-danger" style="">NSP16</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#coronavirus-nonstructural-protein-2"><kbd class="alert-danger" style="">NSP2</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#coronavirus-nonstructural-protein-4"><kbd class="alert-danger" style="">NSP4</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#coronavirus-nonstructural-protein-6"><kbd class="alert-danger" style="">NSP6</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#coronavirus-nonstructural-protein-7"><kbd class="alert-danger" style="">NSP7</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#coronavirus-nonstructural-protein-8"><kbd class="alert-danger" style="">NSP8</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#coronavirus-nonstructural-protein-9"><kbd class="alert-danger" style="">NSP9</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#coronavirus-open-reading-frame-10"><kbd class="alert-danger" style="">ORF10</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#coronavirus-open-reading-frame-3a"><kbd class="alert-danger" style="">ORF3a</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#coronavirus-open-reading-frame-6"><kbd class="alert-danger" style="">ORF6</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#coronavirus-open-reading-frame-7a"><kbd class="alert-danger" style="">ORF7a</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#coronavirus-open-reading-frame-7b"><kbd class="alert-danger" style="">ORF7b</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#coronavirus-open-reading-frame-8"><kbd class="alert-danger" style="">ORF8</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#programmed-cell-death-factor-1"><kbd class="alert-danger" style="">PD-1</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#sars-cov-2-papain-like-protease-nsp3"><kbd class="alert-danger" style="">PLpro</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#sars-cov-2-rna-polymerase-nsp12"><kbd class="alert-danger" style="">RdRP</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#transmembrane-protease-serine-2"><kbd class="alert-danger" style="">TMPRSS2</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#viral-spike-fusion-core"><kbd class="alert-danger" style="">fusion core</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#p38-mitogen-activated-protein-kinase-mpak"><kbd class="alert-danger" style="">p38</kbd></a>
+                
+                <a href="https://covid.molssi.org//structures/#sars-cov-2-spike-s-glycoprotein"><kbd class="alert-danger" style="">spike</kbd></a>
+                
+            </p>
+            <h3>Models:</h3>
+            <p>
+                
+                <a href="https://covid.molssi.org//models/#sars-cov-2-main-protease-3clpro-or-nsp5"><kbd class="alert-info" style="">3CLpro</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#angiotensin-converting-enzyme-2-ace2"><kbd class="alert-info" style="">ACE2</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#sodium-dependent-neutral-amnio-acid-transporter-boat1"><kbd class="alert-info" style="">BoAT1</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#envelope-small-membrane-protein"><kbd class="alert-info" style="">E protein</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#ab-receptor-in-host-cells-fcr"><kbd class="alert-info" style="">Fc receptor</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#furin-pace"><kbd class="alert-info" style="">Furin</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#helicase-coronavirus-nonstructural-protein-13-nsp13"><kbd class="alert-info" style="">Helicase</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#interleukin-6-il-6-receptor"><kbd class="alert-info" style="">IL6R</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#membrane-glycoprotein"><kbd class="alert-info" style="">M protein</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#nucleoprotein"><kbd class="alert-info" style="">N protein</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#coronavirus-nonstructural-protein-1"><kbd class="alert-info" style="">NSP1</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#coronavirus-nonstructural-protein-10"><kbd class="alert-info" style="">NSP10</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#coronavirus-nonstructural-protein-11"><kbd class="alert-info" style="">NSP11</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#coronavirus-nonstructural-protein-14"><kbd class="alert-info" style="">NSP14</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#coronavirus-nonstructural-protein-15"><kbd class="alert-info" style="">NSP15</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#coronavirus-nonstructural-protein-16"><kbd class="alert-info" style="">NSP16</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#coronavirus-nonstructural-protein-2"><kbd class="alert-info" style="">NSP2</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#coronavirus-nonstructural-protein-4"><kbd class="alert-info" style="">NSP4</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#coronavirus-nonstructural-protein-6"><kbd class="alert-info" style="">NSP6</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#coronavirus-nonstructural-protein-7"><kbd class="alert-info" style="">NSP7</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#coronavirus-nonstructural-protein-8"><kbd class="alert-info" style="">NSP8</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#coronavirus-nonstructural-protein-9"><kbd class="alert-info" style="">NSP9</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#coronavirus-open-reading-frame-10"><kbd class="alert-info" style="">ORF10</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#coronavirus-open-reading-frame-3a"><kbd class="alert-info" style="">ORF3a</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#coronavirus-open-reading-frame-6"><kbd class="alert-info" style="">ORF6</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#coronavirus-open-reading-frame-7a"><kbd class="alert-info" style="">ORF7a</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#coronavirus-open-reading-frame-7b"><kbd class="alert-info" style="">ORF7b</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#coronavirus-open-reading-frame-8"><kbd class="alert-info" style="">ORF8</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#programmed-cell-death-factor-1"><kbd class="alert-info" style="">PD-1</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#sars-cov-2-papain-like-protease-nsp3"><kbd class="alert-info" style="">PLpro</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#sars-cov-2-rna-polymerase-nsp12"><kbd class="alert-info" style="">RdRP</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#transmembrane-protease-serine-2"><kbd class="alert-info" style="">TMPRSS2</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#viral-spike-fusion-core"><kbd class="alert-info" style="">fusion core</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#p38-mitogen-activated-protein-kinase-mpak"><kbd class="alert-info" style="">p38</kbd></a>
+                
+                <a href="https://covid.molssi.org//models/#sars-cov-2-spike-s-glycoprotein"><kbd class="alert-info" style="">spike</kbd></a>
+                
+            </p>
+            <h3>Therapeutics:</h3>
+            <p>
+                
+                <a href="https://covid.molssi.org//therapeutics/#antibody"><kbd class="alert-success" style="">antibody</kbd></a>
+                
+                <a href="https://covid.molssi.org//therapeutics/#antiviral"><kbd class="alert-success" style="">antiviral</kbd></a>
+                
+                <a href="https://covid.molssi.org//therapeutics/#immunotherapy"><kbd class="alert-success" style="">immunotherapy</kbd></a>
+                
+                <a href="https://covid.molssi.org//therapeutics/#peptide"><kbd class="alert-success" style="">peptide</kbd></a>
+                
+                <a href="https://covid.molssi.org//therapeutics/#small-molecule"><kbd class="alert-success" style="">small molecule</kbd></a>
+                
+            </p>
+            <h3>Simulations:</h3>
+            <p>
+                
+                <a href="https://covid.molssi.org//simulations/#sars-cov-2-main-protease-3clpro-or-nsp5"><kbd class="alert-secondary" style="">3CLpro</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#angiotensin-converting-enzyme-2-ace2"><kbd class="alert-secondary" style="">ACE2</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#sodium-dependent-neutral-amnio-acid-transporter-boat1"><kbd class="alert-secondary" style="">BoAT1</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#envelope-small-membrane-protein"><kbd class="alert-secondary" style="">E protein</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#ab-receptor-in-host-cells-fcr"><kbd class="alert-secondary" style="">Fc receptor</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#furin-pace"><kbd class="alert-secondary" style="">Furin</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#helicase-coronavirus-nonstructural-protein-13-nsp13"><kbd class="alert-secondary" style="">Helicase</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#interleukin-6-il-6-receptor"><kbd class="alert-secondary" style="">IL6R</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#membrane-glycoprotein"><kbd class="alert-secondary" style="">M protein</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#nucleoprotein"><kbd class="alert-secondary" style="">N protein</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#coronavirus-nonstructural-protein-1"><kbd class="alert-secondary" style="">NSP1</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#coronavirus-nonstructural-protein-10"><kbd class="alert-secondary" style="">NSP10</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#coronavirus-nonstructural-protein-11"><kbd class="alert-secondary" style="">NSP11</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#coronavirus-nonstructural-protein-14"><kbd class="alert-secondary" style="">NSP14</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#coronavirus-nonstructural-protein-15"><kbd class="alert-secondary" style="">NSP15</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#coronavirus-nonstructural-protein-16"><kbd class="alert-secondary" style="">NSP16</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#coronavirus-nonstructural-protein-2"><kbd class="alert-secondary" style="">NSP2</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#coronavirus-nonstructural-protein-4"><kbd class="alert-secondary" style="">NSP4</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#coronavirus-nonstructural-protein-6"><kbd class="alert-secondary" style="">NSP6</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#coronavirus-nonstructural-protein-7"><kbd class="alert-secondary" style="">NSP7</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#coronavirus-nonstructural-protein-8"><kbd class="alert-secondary" style="">NSP8</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#coronavirus-nonstructural-protein-9"><kbd class="alert-secondary" style="">NSP9</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#coronavirus-open-reading-frame-10"><kbd class="alert-secondary" style="">ORF10</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#coronavirus-open-reading-frame-3a"><kbd class="alert-secondary" style="">ORF3a</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#coronavirus-open-reading-frame-6"><kbd class="alert-secondary" style="">ORF6</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#coronavirus-open-reading-frame-7a"><kbd class="alert-secondary" style="">ORF7a</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#coronavirus-open-reading-frame-7b"><kbd class="alert-secondary" style="">ORF7b</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#coronavirus-open-reading-frame-8"><kbd class="alert-secondary" style="">ORF8</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#programmed-cell-death-factor-1"><kbd class="alert-secondary" style="">PD-1</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#sars-cov-2-papain-like-protease-nsp3"><kbd class="alert-secondary" style="">PLpro</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#sars-cov-2-rna-polymerase-nsp12"><kbd class="alert-secondary" style="">RdRP</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#transmembrane-protease-serine-2"><kbd class="alert-secondary" style="">TMPRSS2</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#viral-spike-fusion-core"><kbd class="alert-secondary" style="">fusion core</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#p38-mitogen-activated-protein-kinase-mpak"><kbd class="alert-secondary" style="">p38</kbd></a>
+                
+                <a href="https://covid.molssi.org//simulations/#sars-cov-2-spike-s-glycoprotein"><kbd class="alert-secondary" style="">spike</kbd></a>
+                
+            </p>
+            <h3>Links:</h3>
+            <p>
+                
+                <a href="https://covid.molssi.org//links/#cord-19-covid-19-open-research-dataset"><kbd style="">CORD-19: COVID-19 Open Research Dataset</kbd></a>
+                
+                <a href="https://covid.molssi.org//links/#cov3d-a-coronavirus-3d-structure-database"><kbd style="">COV3D: A Coronavirus 3D Structure Database</kbd></a>
+                
+                <a href="https://covid.molssi.org//links/#coronaviruses-101-focus-on-molecular-virology"><kbd style="">Coronaviruses 101- Focus on Molecular Virology</kbd></a>
+                
+                <a href="https://covid.molssi.org//links/#drug-repurposing-hub"><kbd style="">Drug Repurposing Hub</kbd></a>
+                
+                <a href="https://covid.molssi.org//links/#drugbank-database"><kbd style="">DrugBank database</kbd></a>
+                
+                <a href="https://covid.molssi.org//links/#enamine-real-space"><kbd style="">Enamine REAL Space</kbd></a>
+                
+                <a href="https://covid.molssi.org//links/#molport"><kbd style="">MolPort</kbd></a>
+                
+                <a href="https://covid.molssi.org//links/#pubchem"><kbd style="">PubChem</kbd></a>
+                
+                <a href="https://covid.molssi.org//links/#sweetlead"><kbd style="">SWEETLEAD</kbd></a>
+                
+                <a href="https://covid.molssi.org//links/#structural-biology-task-force-github-page"><kbd style="">Structural Biology Task Force GitHub page</kbd></a>
+                
+                <a href="https://covid.molssi.org//links/#structure-models-of-all-mature-peptides-in-2019-ncov-genome-by-c-i-tasser"><kbd style="">Structure models of all mature peptides in 2019-nCoV genome by C-I-TASSER</kbd></a>
+                
+                <a href="https://covid.molssi.org//links/#superdrug"><kbd style="">SuperDRUG</kbd></a>
+                
+                <a href="https://covid.molssi.org//links/#the-cambridge-structural-database"><kbd style="">The Cambridge Structural Database</kbd></a>
+                
+                <a href="https://covid.molssi.org//links/#tristan-croll-isolde-covid-19-models"><kbd style="">Tristan Croll ISOLDE COVID-19 models</kbd></a>
+                
+                <a href="https://covid.molssi.org//links/#wuxi-galaxi"><kbd style="">WuXi GalaXi</kbd></a>
+                
+                <a href="https://covid.molssi.org//links/#zinc15-database"><kbd style="">zinc15 database</kbd></a>
+                
+            </p>
+        </div>
+
+    </div>
+
+</main>
+
+
+        <footer>
+            <a href="https://molssi.org/"><img src="/images/org-logos/molssi_logo.png" style="width:10%"></a>
+            <a href="https://bioexcel.eu/"><img src="/images/org-logos/bioexcel_logo.png" style="width:10%"></a>
+        
+
+            <h3><u>Endorsements</u></h3>
+            
+
+
+ 
+ 
+  
+  
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+<style>
+
+.marquee {
+  height: 150px;
+  width: 750px;
+  overflow: hidden;
+  margin: auto;
+  box-sizing: border-box;
+  position: relative;
+  max-width: 750px;
+}
+
+.marquee--inner {
+  display: flex;
+  width: 1500px;
+  height: 150px;
+  margin: 0px 0;
+  position: absolute;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee--inner:hover {
+  animation-play-state: paused;
+}
+
+ 
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -750px; }
+}
+
+
+.endorsement-elements {
+   width: 250px;  
+   display: inline-block;
+   max-height: 150px;
+   flex-grow: 1;
+   align-self: center;
+}
+
+.endorsement-elements:hover {
+  transform: scale(0.9);
+  opacity: .8;
+  cursor: pointer;
+}
+
+.endorse-img {
+    display: block;
+    max-width: 250px;
+    max-height: calc(150px - 10px - 18px - 4px);  
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+</style>
+
+
+
+
+
+
+<div class="marquee">
+  <div class="marquee--inner">
+     
+        
+        
+          
+        
+          
+            <div align="center" class='endorsement-elements' style="margin:0;padding:0">
+              
+                <a href="https://www.deshawresearch.com/">
+              
+                <img class="endorse-img" src="/images/org-logos/DESRES_Logo_K.svg" alt="" />
+              
+                </a>
+              
+                <h4>D. E. Shaw Research</h4> 
+            </div>
+          
+        
+          
+            <div align="center" class='endorsement-elements' style="margin:0;padding:0">
+              
+                <a href="https://foldingathome.org/">
+              
+                <img class="endorse-img" src="/images/org-logos/fah.png" alt="" />
+              
+                </a>
+              
+                <h4>Folding @ Home</h4> 
+            </div>
+          
+        
+          
+        
+          
+            <div align="center" class='endorsement-elements' style="margin:0;padding:0">
+              
+                <a href="https://zhanglab.ccmb.med.umich.edu/">
+              
+                <img class="endorse-img" src="/images/org-logos/zhang-lab.jpg" alt="" />
+              
+                </a>
+              
+                <h4>Zhang Lab</h4> 
+            </div>
+          
+        
+     
+        
+        
+          
+        
+          
+            <div align="center" class='endorsement-elements' style="margin:0;padding:0">
+              
+                <a href="https://www.deshawresearch.com/">
+              
+                <img class="endorse-img" src="/images/org-logos/DESRES_Logo_K.svg" alt="" />
+              
+                </a>
+              
+                <h4>D. E. Shaw Research</h4> 
+            </div>
+          
+        
+          
+            <div align="center" class='endorsement-elements' style="margin:0;padding:0">
+              
+                <a href="https://foldingathome.org/">
+              
+                <img class="endorse-img" src="/images/org-logos/fah.png" alt="" />
+              
+                </a>
+              
+                <h4>Folding @ Home</h4> 
+            </div>
+          
+        
+          
+        
+          
+            <div align="center" class='endorsement-elements' style="margin:0;padding:0">
+              
+                <a href="https://zhanglab.ccmb.med.umich.edu/">
+              
+                <img class="endorse-img" src="/images/org-logos/zhang-lab.jpg" alt="" />
+              
+                </a>
+              
+                <h4>Zhang Lab</h4> 
+            </div>
+          
+        
+    
+  </div>
+</div>
+
+            <p class="copyright text-muted">&copy; All rights reserved. COVID-19 Molecular Structure and Therapeutics Hub is lead by <a href="http://molssi.org/">MolSSI</a> &amp; <a href="https://bioexcel.eu">BioExcel</a>. The MolSSI is supported by the U.S. National Science Foundation through grant number OAC-1547580. <a href="https://ec.europa.eu/programmes/horizon2020">BioExcel is funded by the European Union Horizon 2020</a> program under grant agreements <a href="https://cordis.europa.eu/project/id/823830">823830</a>, <a href="https://cordis.europa.eu/project/id/675728">675728</a></p>
+        </footer>
+
+        
+
+
+
+    </body>
+
+</html>
+
